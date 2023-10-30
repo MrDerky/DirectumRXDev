@@ -39,10 +39,12 @@ namespace Starkov.RoadMaps.Server
     
     public override bool IsModuleVisible()
     {
-      var managersRole = Sungero.Docflow.PublicInitializationFunctions.Module.GetProjectManagersRole();
-      var salesGroup = Sungero.CoreEntities.Groups.GetAll(x => x.Name == "Отдел продаж").FirstOrDefault();
-
-      return Users.Current.IncludedIn(managersRole) || Users.Current.IncludedIn(salesGroup);
+      // На время разработки просто возвращает true;
+      return true;
+//      var managersRole = Sungero.Docflow.PublicInitializationFunctions.Module.GetProjectManagersRole();
+//      var salesGroup = Sungero.CoreEntities.Groups.GetAll(x => x.Name == "Отдел продаж").FirstOrDefault();
+//
+//      return Users.Current.IncludedIn(managersRole) || Users.Current.IncludedIn(salesGroup);
     }
   }
 }
