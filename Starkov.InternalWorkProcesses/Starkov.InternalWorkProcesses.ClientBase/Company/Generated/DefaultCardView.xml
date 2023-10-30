@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collection40abff672d9941ac9e28955843f91ee9 FormGuid="e291cd94-5c11-4e4a-8e14-77632f57a675">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="View" isnull="true" iskey="true">
+          <property name="LinesPerRowMode">None</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">988,-2</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="6">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">Company_RoadmapEventsStarkov_EventName</property>
+            <property name="FieldName">EventName</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">103</property>
+            <property name="ActualWidth">9*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">Company_RoadmapEventsStarkov_Date</property>
+            <property name="FieldName">Date</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">57</property>
+            <property name="ActualWidth">5*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">Company_RoadmapEventsStarkov_DaysComplete</property>
+            <property name="FieldName">DaysComplete</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">148</property>
+            <property name="ActualWidth">13*</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">Company_RoadmapEventsStarkov_Responsible</property>
+            <property name="FieldName">Responsible</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">114</property>
+            <property name="ActualWidth">10*</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">Company_RoadmapEventsStarkov_EventStatus</property>
+            <property name="FieldName">EventStatus</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">137</property>
+            <property name="ActualWidth">12*</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="Name">Company_RoadmapEventsStarkov_Note</property>
+            <property name="FieldName">Note</property>
+            <property name="VisibleIndex">5</property>
+            <property name="Width">103</property>
+            <property name="ActualWidth">9*</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection40abff672d9941ac9e28955843f91ee9>
+</settings>

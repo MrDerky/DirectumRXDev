@@ -1,0 +1,115 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "a72b4b14-0574-4552-a0a5-254317c938b6",
+  "Name": "CompanyRoadmapEventsStarkov",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "CompanyRoadmap",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "7a8103a4-d464-41f0-b94d-514ea5c2d878",
+      "Name": "Company",
+      "CanBeSearch": false,
+      "Code": "Counterparty",
+      "EntityGuid": "0e3bd491-98e0-474c-a777-ebc065389340",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "4a92ef37-b8dc-47be-8592-c094e7fcd514",
+      "Name": "EventName",
+      "CanBeSearch": false,
+      "Code": "EventName",
+      "IsRequired": true,
+      "Length": 512,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "7a8103a4-d464-41f0-b94d-514ea5c2d878"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "58438d8a-e1ef-4022-92cc-8390cd6fe302",
+      "Name": "Date",
+      "CanBeSearch": false,
+      "Code": "Date",
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "4a92ef37-b8dc-47be-8592-c094e7fcd514"
+    },
+    {
+      "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "3069794a-3f87-4075-af94-8d24b2a4b3b7",
+      "Name": "DaysComplete",
+      "CanBeSearch": false,
+      "Code": "DaysComplete",
+      "HandledEvents": [
+        "ValueInputClient"
+      ],
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "58438d8a-e1ef-4022-92cc-8390cd6fe302"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "e9ce0220-bde2-4bbe-8d8c-d7b346b35f2e",
+      "Name": "Responsible",
+      "CanBeSearch": false,
+      "Code": "Responsible",
+      "EntityGuid": "b7905516-2be5-4931-961c-cb38d5677565",
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "3069794a-3f87-4075-af94-8d24b2a4b3b7"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "cc7967e1-c670-49d0-87da-316edec2beaf",
+      "Name": "EventStatus",
+      "CanBeSearch": false,
+      "Code": "EventStatus",
+      "EntityGuid": "8e474db3-c1d5-4623-b887-f6ff19472395",
+      "FlatListInStandaloneLookup": true,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "e9ce0220-bde2-4bbe-8d8c-d7b346b35f2e"
+    },
+    {
+      "$type": "Sungero.Metadata.TextPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "e8c26f38-f47e-4706-a68a-3b7bb2c02a53",
+      "Name": "Note",
+      "CanBeSearch": false,
+      "Code": "Note",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToTextBinder",
+      "PreviousPropertyGuid": "cc7967e1-c670-49d0-87da-316edec2beaf"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "adee2028-fcb4-4662-bb11-eb6328b3b1b9",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "8da56ba8-74c6-4d0f-9fd6-03c7c9a301f3",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 12
+    }
+  ]
+}

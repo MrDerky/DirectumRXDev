@@ -1,0 +1,65 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "27ff46af-81fb-40b6-b7f0-ec3817e64834",
+  "Name": "InternalWorkProcesses",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Starkov.InternalWorkProcesses.Client",
+  "ClientBaseAssemblyName": "Starkov.InternalWorkProcesses.ClientBase",
+  "ClientBaseNamespace": "Starkov.InternalWorkProcesses.ClientBase",
+  "ClientNamespace": "Starkov.InternalWorkProcesses.Client",
+  "Code": "Intern1",
+  "CompanyCode": "Starkov",
+  "Cover": {
+    "NameGuid": "ee3473d6-f121-4a05-b36e-6f21bc64a2d4",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "0ab47450-8b1c-4329-9ed4-1058bd983fca",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "53c963f9-e2b8-426d-9341-1408e1aeb3f5",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "0e3bd491-98e0-474c-a777-ebc065389340"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Starkov.InternalWorkProcesses",
+  "IsolatedAssemblyName": "Starkov.InternalWorkProcesses.Isolated",
+  "IsolatedNamespace": "Starkov.InternalWorkProcesses.Isolated",
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Starkov.InternalWorkProcesses",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Starkov.InternalWorkProcesses.Server",
+  "ServerNamespace": "Starkov.InternalWorkProcesses.Server",
+  "SharedAssemblyName": "Starkov.InternalWorkProcesses.Shared",
+  "SharedNamespace": "Starkov.InternalWorkProcesses.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

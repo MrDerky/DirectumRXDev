@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_RoadmapEventsStarkov" xml:space="preserve">
+    <value>RoadmapEvents</value>
+  </data>
+  <data name="Form_e291cd945c114e4a8e1477632f57a675" xml:space="preserve">
+    <value>Roadmap</value>
+  </data>
+  <data name="ControlGroup_957ea6443cb84093bd481dcd919b82ab" xml:space="preserve">
+    <value>События дорожной карты</value>
+  </data>
+  <data name="Action_TaskStarkov" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="Action_TaskStarkovDescription" xml:space="preserve">
+    <value>Поиск задач созданных по мероприятию дорожной карты</value>
+  </data>
+  <data name="Action_TaskStarkovHint" xml:space="preserve">
+    <value>Задача по мероприятию дорожной карты</value>
+  </data>
+  <data name="Action_TaskStarkovConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_TaskStarkovConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_AllTasksStarkov" xml:space="preserve">
+    <value>AllTasks</value>
+  </data>
+  <data name="Action_AllTasksStarkovDescription" xml:space="preserve">
+    <value>Все задачи в рамках регламента "Исполнение мероприятий дорожной карты"</value>
+  </data>
+  <data name="Action_AllTasksStarkovHint" xml:space="preserve">
+    <value>Все задачи в рамках регламента "Исполнение мероприятий дорожной карты"</value>
+  </data>
+  <data name="Action_AllTasksStarkovConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_AllTasksStarkovConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_PageActionsStarkov_ffa1136e284a4d6fa7d631a745300603" xml:space="preserve">
+    <value>Действия дорожной карты</value>
+  </data>
+  <data name="Ribbon_GroupStarkov_736d05ac72454808810dcb55295f3af9" xml:space="preserve">
+    <value>Дорожная карта</value>
+  </data>
+  <data name="Action_ImportRoadmapStarkov" xml:space="preserve">
+    <value>ImportRoadmap</value>
+  </data>
+  <data name="Action_ImportRoadmapStarkovDescription" xml:space="preserve">
+    <value>Импорт из Excel файла данных о дорожных картах</value>
+  </data>
+  <data name="Action_ImportRoadmapStarkovHint" xml:space="preserve">
+    <value>Импорт из Excel файла данных о дорожных картах</value>
+  </data>
+  <data name="Action_ImportRoadmapStarkovConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ImportRoadmapStarkovConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+</root>

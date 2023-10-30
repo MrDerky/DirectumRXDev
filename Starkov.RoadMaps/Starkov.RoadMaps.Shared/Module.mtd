@@ -1,0 +1,117 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "a7b3af29-1678-45b5-b689-967d54ab8144",
+  "Name": "RoadMaps",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Starkov.RoadMaps.Client",
+  "ClientBaseAssemblyName": "Starkov.RoadMaps.ClientBase",
+  "ClientBaseNamespace": "Starkov.RoadMaps.ClientBase",
+  "ClientNamespace": "Starkov.RoadMaps.Client",
+  "Code": "RoadMap",
+  "CompanyCode": "Starkov",
+  "Cover": {
+    "NameGuid": "30fc98fa-8062-4773-92e5-fe7fd8859d87",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "af955f64-791e-4d8c-a848-5515d25ce7a1",
+        "Name": "Company",
+        "EntityTypeId": "0e3bd491-98e0-474c-a777-ebc065389340",
+        "GroupId": "09bc2250-c2ac-44ac-8520-17e49bf0a3e9",
+        "PreviousItemGuid": "e3896dab-b640-489a-b98d-26f958cfdc03"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "e3896dab-b640-489a-b98d-26f958cfdc03",
+        "Name": "EventStatuses",
+        "EntityTypeId": "8e474db3-c1d5-4623-b887-f6ff19472395",
+        "GroupId": "09bc2250-c2ac-44ac-8520-17e49bf0a3e9"
+      }
+    ],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "98532ac7-3d7e-40f9-885a-377064cbbf7c",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [
+      {
+        "NameGuid": "09bc2250-c2ac-44ac-8520-17e49bf0a3e9",
+        "Name": "Group",
+        "BackgroundPosition": "Stretch",
+        "TabId": "81eb5021-a15d-49b6-bbb3-b9d535ae8f78"
+      }
+    ],
+    "Header": {
+      "NameGuid": "83323a83-3466-4454-803f-f1eae70f19c1",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": [
+      {
+        "NameGuid": "81eb5021-a15d-49b6-bbb3-b9d535ae8f78",
+        "Name": "Directory"
+      }
+    ]
+  },
+  "Dependencies": [
+    {
+      "Id": "27ff46af-81fb-40b6-b7f0-ec3817e64834",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "7fa49e5c-f065-4291-ad2d-66d3b5f5224e",
+      "PreviousItemId": "92aa97b5-8582-4951-8315-d611e73bb6e6"
+    },
+    {
+      "ItemId": "8e474db3-c1d5-4623-b887-f6ff19472395",
+      "PreviousItemId": "7fa49e5c-f065-4291-ad2d-66d3b5f5224e"
+    },
+    {
+      "ItemId": "d9645a0f-2610-4847-a0e8-978ee2970336",
+      "PreviousItemId": "8e474db3-c1d5-4623-b887-f6ff19472395"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer",
+    "VisibilityServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Starkov.RoadMaps",
+  "IsolatedAssemblyName": "Starkov.RoadMaps.Isolated",
+  "IsolatedNamespace": "Starkov.RoadMaps.Isolated",
+  "Jobs": [
+    {
+      "NameGuid": "3468432a-262c-4c1c-9e7e-6b1b10be49dc",
+      "Name": "RoadmapsTask",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T00:00:00"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Starkov.RoadMaps",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Starkov.RoadMaps.Server",
+  "ServerNamespace": "Starkov.RoadMaps.Server",
+  "SharedAssemblyName": "Starkov.RoadMaps.Shared",
+  "SharedNamespace": "Starkov.RoadMaps.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

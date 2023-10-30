@@ -1,0 +1,203 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "0e3bd491-98e0-474c-a777-ebc065389340",
+  "Name": "Company",
+  "Actions": [
+    {
+      "NameGuid": "3f334f1e-d7a4-4ca5-bd1a-f26b35ccfae8",
+      "Name": "DeleteChildEntity",
+      "GenerateHandler": true,
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "GenerateHandler"
+      ],
+      "Versions": []
+    },
+    {
+      "NameGuid": "0ad935f7-1253-40e7-a78b-3e354730458c",
+      "Name": "TaskStarkov",
+      "ActionArea": "ChildCollection",
+      "CollectionPropertyGuid": "80fb84ec-9708-4c52-b8a9-08f2490f44a6",
+      "GenerateHandler": true,
+      "LargeIconName": null,
+      "SmallIconName": null
+    },
+    {
+      "NameGuid": "5aaf0f45-2d42-4a3b-bd4f-4ec87c0cf048",
+      "Name": "AllTasksStarkov",
+      "ActionArea": "Card",
+      "GenerateHandler": true,
+      "LargeIconName": null,
+      "SmallIconName": null
+    },
+    {
+      "NameGuid": "06daa044-b3e3-4e31-9e7f-dfb9f33794c5",
+      "Name": "ImportRoadmapStarkov",
+      "ActionArea": "Card",
+      "GenerateHandler": true,
+      "LargeIconName": null,
+      "SmallIconName": null
+    }
+  ],
+  "BaseGuid": "593e143c-616c-4d95-9457-fd916c4aa7f8",
+  "CanBeNavigationPropertyType": true,
+  "CreationAreaMetadata": {
+    "NameGuid": "308b66c0-28e9-4beb-bf43-03fc550c1468",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true,
+    "Versions": []
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true,
+    "Versions": []
+  },
+  "Forms": [
+    {
+      "$type": "Sungero.Metadata.InplaceFormMetadata, Sungero.Metadata",
+      "NameGuid": "7fdc0378-de56-4ad7-8641-91aae797d1ec",
+      "Name": "ExchangeBoxes",
+      "Controls": [],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "SettingsResourceKey"
+      ],
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.StandaloneFormMetadata, Sungero.Metadata",
+      "NameGuid": "026f3b94-a2e4-47bc-a270-d900853f782e",
+      "Name": "Card",
+      "Controls": [],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "SettingsResourceKey"
+      ],
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.InplaceFormMetadata, Sungero.Metadata",
+      "NameGuid": "e291cd94-5c11-4e4a-8e14-77632f57a675",
+      "Name": "PageStarkov",
+      "Controls": [
+        {
+          "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
+          "NameGuid": "957ea644-3cb8-4093-bd48-1dcd919b82ab",
+          "Name": "ControlGroupStarkov"
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "40abff67-2d99-41ac-9e28-955843f91ee9",
+          "Name": "RoadmapEventsControlStarkov",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.GridControlToChildCollectionBinder",
+          "HeaderLocation": "None",
+          "ParentGuid": "957ea644-3cb8-4093-bd48-1dcd919b82ab",
+          "PropertyGuid": "80fb84ec-9708-4c52-b8a9-08f2490f44a6",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
+        }
+      ],
+      "ParentFormGuid": "026f3b94-a2e4-47bc-a270-d900853f782e",
+      "PreviousInplaceFormGuid": "7fdc0378-de56-4ad7-8641-91aae797d1ec"
+    }
+  ],
+  "HandledEvents": [
+    "SavedServer",
+    "ShowingClient"
+  ],
+  "IconResourcesKeys": [],
+  "LayeredFromGuid": "593e143c-616c-4d95-9457-fd916c4aa7f8",
+  "OperationsClass": "",
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "8c43815d-1a3d-47ec-a98d-909052509a21",
+      "Name": "ExchangeBoxes",
+      "EntityGuid": "55cd3965-e37d-420c-b63f-6e0918fd2a28",
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "EntityGuid"
+      ],
+      "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "80fb84ec-9708-4c52-b8a9-08f2490f44a6",
+      "Name": "RoadmapEventsStarkov",
+      "Code": "CompanyRoadmap",
+      "EntityGuid": "a72b4b14-0574-4552-a0a5-254317c938b6",
+      "HandledEvents": [
+        "AddedShared"
+      ],
+      "IsShowedInList": false,
+      "PreviousPropertyGuid": "3ae9dd96-2ff5-4954-8561-d033cb7b31e9"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "71b091f3-d0ad-4d86-99f0-cc91248bce4e",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [
+      {
+        "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
+        "NameGuid": "03dcd96e-56f8-43da-954b-29dd21e49309",
+        "Name": "AllTasksButton",
+        "ActionGuid": "5aaf0f45-2d42-4a3b-bd4f-4ec87c0cf048",
+        "Index": 0,
+        "ParentGuid": "736d05ac-7245-4808-810d-cb55295f3af9"
+      },
+      {
+        "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
+        "NameGuid": "e7cc5487-6d02-4910-8355-1f5951acd8ae",
+        "Name": "ImportRoadmapButton",
+        "ActionGuid": "06daa044-b3e3-4e31-9e7f-dfb9f33794c5",
+        "Index": 1,
+        "ParentGuid": "736d05ac-7245-4808-810d-cb55295f3af9"
+      }
+    ],
+    "Groups": [
+      {
+        "NameGuid": "736d05ac-7245-4808-810d-cb55295f3af9",
+        "Name": "GroupStarkov",
+        "IconName": null,
+        "Index": 0,
+        "ParentGuid": "ffa1136e-284a-4d6f-a7d6-31a745300603",
+        "SmallIconName": null
+      }
+    ],
+    "IsAncestorMetadata": true,
+    "Pages": [
+      {
+        "NameGuid": "ffa1136e-284a-4d6f-a7d6-31a745300603",
+        "Name": "PageActionsStarkov",
+        "Index": 31,
+        "ParentGuid": "ab56c73d-5e95-4014-b359-86c97643f13c"
+      }
+    ],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "b1382151-fe29-4807-984f-57149cf07220",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 12
+    }
+  ]
+}
