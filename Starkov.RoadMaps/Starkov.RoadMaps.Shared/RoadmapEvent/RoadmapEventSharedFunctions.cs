@@ -9,6 +9,6 @@ namespace Starkov.RoadMaps.Shared
 {
   partial class RoadmapEventFunctions
   {
-
+    
   }
 }

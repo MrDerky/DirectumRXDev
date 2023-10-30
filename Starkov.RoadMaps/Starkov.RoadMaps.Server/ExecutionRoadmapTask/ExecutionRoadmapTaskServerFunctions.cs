@@ -9,6 +9,12 @@ namespace Starkov.RoadMaps.Server
 {
   partial class ExecutionRoadmapTaskFunctions
   {
-
+    
+    [Public]
+    public static IExecutionRoadmapTask CreateTaskByEvent(IRoadmapEvent roadmapEvent)
+    {
+      var task = ExecutionRoadmapTasks.Create();
+      task.
+    }
   }
 }

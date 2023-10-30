@@ -68,5 +68,18 @@ namespace Starkov.RoadMaps.Server
       
       RoadmapEvents.Delete(roadMap);
     }
+    
+    /// <summary>
+    /// Вернуть список событий дорожных карт, задачи по которым должны быть запущены сегодня
+    /// </summary>
+    /// <returns></returns>
+    [Public]
+    public static IQueryable<IRoadmapEvent> GetRunTodayEvent()
+    {
+      var today = Calendar.Now.Date;
+      var roadmaps = Starkov.RoadMaps.RoadmapEvents.GetAll()
+        .Where(x => Equals(x.Date.Value.AddDays(x.DaysComplete), today));
+    }
+    
   }
 }

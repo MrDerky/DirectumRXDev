@@ -194,6 +194,11 @@
       "ReturnTypeFullName": "System.Void"
     },
     {
+      "Name": "GetRunTodayEvent",
+      "ReturnType": "global::System.Linq.IQueryable<global::Starkov.RoadMaps.IRoadmapEvent>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
       "Name": "UpdateRoadMap",
       "IsRemote": true,
       "Parameters": [

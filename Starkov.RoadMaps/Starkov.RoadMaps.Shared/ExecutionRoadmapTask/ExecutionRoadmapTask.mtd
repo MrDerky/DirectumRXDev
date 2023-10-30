@@ -51,6 +51,20 @@
       ]
     }
   ],
+  "PublicFunctions": [
+    {
+      "Name": "CreateTaskByEvent",
+      "Parameters": [
+        {
+          "Name": "roadmapEvent",
+          "ParameterType": "global::Starkov.RoadMaps.IRoadmapEvent",
+          "ParameterTypeFullName": "Starkov.RoadMaps.IRoadmapEvent, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::Starkov.RoadMaps.IExecutionRoadmapTask",
+      "ReturnTypeFullName": "Starkov.RoadMaps.IExecutionRoadmapTask, Sungero.Domain.Interfaces"
+    }
+  ],
   "PublicStructures": [],
   "ResourcesKeys": [],
   "RibbonCardMetadata": {
