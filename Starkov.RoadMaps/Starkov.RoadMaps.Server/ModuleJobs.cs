@@ -14,13 +14,12 @@ namespace Starkov.RoadMaps.Server
     /// </summary>
     public virtual void RoadmapsTask()
     {
-      var roadmaps = PublicFunctions.RoadmapEvent.GetRunTodayEvent();
+      var rmEvents = PublicFunctions.RoadmapEvent.GetRunTodayEvent();
       
-      foreach(var roadmap in roadmaps)
+      foreach(var e in rmEvents)
       {
-        var task = Sungero.Docflow.ApprovalTasks.Create();
-        task.ApprovalRule = approvalRule;
-        task.Subject = string.Format("{0} в срок {1}. {2}", roadmap.EventName, roadmap.Date, roadmap.Note);
+        var task = InternalWorkProcesses.PublicFunctions.ActionItemExecutionTask.CreateTaskByRmEvent(e);
+        task.Start();
       }
     }
 

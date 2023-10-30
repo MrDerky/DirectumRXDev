@@ -77,8 +77,8 @@ namespace Starkov.RoadMaps.Server
     public static IQueryable<IRoadmapEvent> GetRunTodayEvent()
     {
       var today = Calendar.Now.Date;
-      var roadmaps = Starkov.RoadMaps.RoadmapEvents.GetAll()
-        .Where(x => Equals(x.Date.Value.AddDays(x.DaysComplete), today));
+      return Starkov.RoadMaps.RoadmapEvents.GetAll()
+        .Where(x => Equals(x.Date.GetValueOrDefault(), today.AddDays((double)x.DaysComplete.GetValueOrDefault())));
     }
     
   }
