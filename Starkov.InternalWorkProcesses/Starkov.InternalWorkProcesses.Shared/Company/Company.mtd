@@ -109,7 +109,6 @@
     }
   ],
   "HandledEvents": [
-    "SavedServer",
     "ShowingClient"
   ],
   "IconResourcesKeys": [],
@@ -134,8 +133,7 @@
       "Code": "CompanyRoadmap",
       "EntityGuid": "a72b4b14-0574-4552-a0a5-254317c938b6",
       "HandledEvents": [
-        "AddedShared",
-        "ChangedShared"
+        "AddedShared"
       ],
       "IsShowedInList": false,
       "PreviousPropertyGuid": "3ae9dd96-2ff5-4954-8561-d033cb7b31e9"

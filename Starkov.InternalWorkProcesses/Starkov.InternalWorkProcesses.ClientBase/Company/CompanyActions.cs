@@ -71,10 +71,10 @@ namespace Starkov.InternalWorkProcesses.Client
   {
     public override void DeleteChildEntity(Sungero.Domain.Client.ExecuteChildCollectionActionArgs e)
     {
-      var root = Companies.As(e.RootEntity);
-      if (root != null && _all == root.RoadmapEventsStarkov)
-        RoadMaps.PublicFunctions.RoadmapEvent.Remote.DeleteRoadMap(_objs.FirstOrDefault().Id);
-      base.DeleteChildEntity(e);
+//      var root = Companies.As(e.RootEntity);
+//      if (root != null && _all == root.RoadmapEventsStarkov)
+//        RoadMaps.PublicFunctions.RoadmapEvent.Remote.DeleteRoadMap(_objs.FirstOrDefault().Id);
+//      base.DeleteChildEntity(e);
     }
 
     public override bool CanDeleteChildEntity(Sungero.Domain.Client.CanExecuteChildCollectionActionArgs e)

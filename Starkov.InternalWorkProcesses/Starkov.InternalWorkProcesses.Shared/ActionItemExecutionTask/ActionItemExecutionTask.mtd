@@ -132,8 +132,8 @@
       "Parameters": [
         {
           "Name": "rmEvent",
-          "ParameterType": "global::Starkov.RoadMaps.IRoadmapEvent",
-          "ParameterTypeFullName": "Starkov.RoadMaps.IRoadmapEvent, Sungero.Domain.Interfaces"
+          "ParameterType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
+          "ParameterTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
         }
       ],
       "ReturnType": "global::Starkov.InternalWorkProcesses.IActionItemExecutionTask",

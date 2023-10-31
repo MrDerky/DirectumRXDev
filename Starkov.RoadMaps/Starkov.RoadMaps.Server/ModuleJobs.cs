@@ -14,7 +14,7 @@ namespace Starkov.RoadMaps.Server
     /// </summary>
     public virtual void RoadmapsTask()
     {
-      var rmEvents = PublicFunctions.RoadmapEvent.GetRunTodayEvent();
+      var rmEvents = PublicFunctions.Module.GetRunTodayRMEvents();
       
       foreach(var e in rmEvents)
       {

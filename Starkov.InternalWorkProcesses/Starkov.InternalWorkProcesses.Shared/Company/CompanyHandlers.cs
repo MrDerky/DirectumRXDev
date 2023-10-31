@@ -23,15 +23,6 @@ namespace Starkov.InternalWorkProcesses
     }
   }
 
-  partial class CompanySharedHandlers
-  {
-
-    public virtual void RoadmapEventsStarkovChanged(Sungero.Domain.Shared.CollectionPropertyChangedEventArgs e)
-    {
-      
-    }
-  }
-
   partial class CompanyRoadmapEventsStarkovSharedCollectionHandlers
   {
 

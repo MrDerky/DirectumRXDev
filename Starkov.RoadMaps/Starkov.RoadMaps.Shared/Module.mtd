@@ -62,16 +62,8 @@
   ],
   "ExplorerTreeOrder": [
     {
-      "ItemId": "7fa49e5c-f065-4291-ad2d-66d3b5f5224e",
-      "PreviousItemId": "92aa97b5-8582-4951-8315-d611e73bb6e6"
-    },
-    {
       "ItemId": "8e474db3-c1d5-4623-b887-f6ff19472395",
       "PreviousItemId": "7fa49e5c-f065-4291-ad2d-66d3b5f5224e"
-    },
-    {
-      "ItemId": "d9645a0f-2610-4847-a0e8-978ee2970336",
-      "PreviousItemId": "8e474db3-c1d5-4623-b887-f6ff19472395"
     }
   ],
   "HandledEvents": [
@@ -111,6 +103,11 @@
       "Placement": "Shared",
       "ReturnType": "global::System.Nullable<global::System.DateTime>",
       "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetRunTodayRMEvents",
+      "ReturnType": "global::System.Linq.IQueryable<global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
     }
   ],
   "PublicStructures": [],

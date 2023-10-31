@@ -10,17 +10,17 @@ namespace Starkov.InternalWorkProcesses.Server
   partial class ActionItemExecutionTaskFunctions
   {
     [Public]
-    public static IActionItemExecutionTask CreateTaskByRmEvent(RoadMaps.IRoadmapEvent rmEvent)
+    public static IActionItemExecutionTask CreateTaskByRmEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent)
     {
       var task = ActionItemExecutionTasks.Create();
       task.Assignee = rmEvent.Responsible;
-      task.Supervisor = rmEvent.Counterparty.Responsible; // Может быть null?
+      task.Supervisor = rmEvent.Company.Responsible; // Может быть null?
       task.AssignedBy = task.Supervisor; // Возможно просто изменить обязательность
       task.Deadline = rmEvent.Deadline;
       
       task.OtherGroup.All.Add(rmEvent);
-      task.ActiveText = string.Format("{0} в срок {1}. {2}", rmEvent.EventName, rmEvent.Deadline, rmEvent.Note);
-      task.Subject = string.Format("Исполнение мероприятий дорожной карты по «{0}»", rmEvent.Counterparty);
+      task.ActiveText = string.Format("{0} в срок {1}. {2}", rmEvent.Name, rmEvent.Deadline, rmEvent.Note);
+      task.Subject = string.Format("Исполнение мероприятий дорожной карты по «{0}»", rmEvent.Company);
       
       
       return task;
