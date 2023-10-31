@@ -82,12 +82,12 @@
     {
       "$type": "Sungero.Metadata.InplaceFormMetadata, Sungero.Metadata",
       "NameGuid": "e291cd94-5c11-4e4a-8e14-77632f57a675",
-      "Name": "PageStarkov",
+      "Name": "RoadMapStarkov",
       "Controls": [
         {
           "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
           "NameGuid": "957ea644-3cb8-4093-bd48-1dcd919b82ab",
-          "Name": "ControlGroupStarkov"
+          "Name": "RoadMapStarkov"
         },
         {
           "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",

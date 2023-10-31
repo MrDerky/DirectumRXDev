@@ -12,6 +12,7 @@ namespace Starkov.InternalWorkProcesses
 
     public virtual void RoadmapEventsStarkovDaysToCompleteValueInput(Sungero.Presentation.IntegerValueInputEventArgs e)
     {
+      // TODO Больше нуля или от нуля?
       if(e.NewValue < 0)
       {
         e.AddError("Значение должно быть больше 0.");

@@ -18,7 +18,7 @@ namespace Starkov.InternalWorkProcesses
 
     public virtual void RoadmapEventsStarkovDeadlineChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
     {
-      if (e.NewValue.HasValue != null && _obj.DaysToComplete.HasValue)
+      if (e.NewValue.HasValue && _obj.DaysToComplete.HasValue)
         _obj.RunDate = RoadMaps.PublicFunctions.Module.GetCouldRunDate(e.NewValue.Value, _obj.DaysToComplete.GetValueOrDefault());
     }
   }
