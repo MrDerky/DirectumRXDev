@@ -54,7 +54,7 @@ namespace Starkov.InternalWorkProcesses.Client
       var tasks = Sungero.Docflow.ApprovalTasks.GetAll()
         .Where(x => x.ApprovalRule.Name == "Исполнение мероприятий дорожной карты")
         .Where(x => x.Addressee.Equals(_obj.Responsible))
-        .Where(x => x.Subject == _obj.EventName);
+        .Where(x => x.Subject == _obj.Name);
       
       if(tasks.Count() == 0)
       {

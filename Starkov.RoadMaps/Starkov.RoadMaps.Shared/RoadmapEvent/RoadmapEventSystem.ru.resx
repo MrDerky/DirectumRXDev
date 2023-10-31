@@ -61,10 +61,10 @@
   <data name="Property_EventName" xml:space="preserve">
     <value>Мероприятие</value>
   </data>
-  <data name="Property_Date" xml:space="preserve">
+  <data name="Property_Deadline" xml:space="preserve">
     <value>Срок</value>
   </data>
-  <data name="Property_DaysComplete" xml:space="preserve">
+  <data name="Property_DaysToComplete" xml:space="preserve">
     <value>Дней на выполнение</value>
   </data>
   <data name="Property_Responsible" xml:space="preserve">

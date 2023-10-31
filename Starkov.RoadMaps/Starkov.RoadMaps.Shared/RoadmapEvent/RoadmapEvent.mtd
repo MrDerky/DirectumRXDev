@@ -45,6 +45,9 @@
       ]
     }
   ],
+  "HandledEvents": [
+    "BeforeSaveServer"
+  ],
   "IconResourcesKeys": [],
   "IntegrationServiceName": "RoadMapsRoadmapEvent",
   "OperationsClass": "",
@@ -64,8 +67,8 @@
     {
       "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
       "NameGuid": "447ae694-6a0d-410b-a10a-09c0f1f6b21f",
-      "Name": "Date",
-      "Code": "Date",
+      "Name": "Deadline",
+      "Code": "Deadline",
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
       "PreviousPropertyGuid": "0805d03b-a9f7-4a34-8851-4f2081bd41ad"
@@ -73,8 +76,8 @@
     {
       "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
       "NameGuid": "45c096dc-7889-4300-9f63-b12a00b02ce0",
-      "Name": "DaysComplete",
-      "Code": "DaysComplete",
+      "Name": "DaysToComplete",
+      "Code": "DaysToComplete",
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "447ae694-6a0d-410b-a10a-09c0f1f6b21f"
@@ -127,6 +130,17 @@
       "FlatListInStandaloneLookup": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "6d4b5ff9-661e-442c-86f0-c182f6fa322f"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "70b9d60b-0216-42d5-ba37-ae40826b1d24",
+      "Name": "CouldRun",
+      "CanBeSearch": false,
+      "Code": "CouldRun",
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "26ca694c-edfa-4a27-9181-568604e07a9f"
     }
   ],
   "PublicFunctions": [

@@ -10,7 +10,7 @@ namespace Starkov.InternalWorkProcesses
   partial class CompanyRoadmapEventsStarkovClientHandlers
   {
 
-    public virtual void RoadmapEventsStarkovDaysCompleteValueInput(Sungero.Presentation.IntegerValueInputEventArgs e)
+    public virtual void RoadmapEventsStarkovDaysToCompleteValueInput(Sungero.Presentation.IntegerValueInputEventArgs e)
     {
       if(e.NewValue < 0)
       {

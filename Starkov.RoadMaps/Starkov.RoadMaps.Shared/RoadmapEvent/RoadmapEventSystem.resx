@@ -61,11 +61,11 @@
   <data name="Property_EventName" xml:space="preserve">
     <value>EventName</value>
   </data>
-  <data name="Property_Date" xml:space="preserve">
-    <value>Date</value>
+  <data name="Property_Deadline" xml:space="preserve">
+    <value>Deadline</value>
   </data>
-  <data name="Property_DaysComplete" xml:space="preserve">
-    <value>DaysComplete</value>
+  <data name="Property_DaysToComplete" xml:space="preserve">
+    <value>DaysToComplete</value>
   </data>
   <data name="Property_Responsible" xml:space="preserve">
     <value>Responsible</value>
@@ -81,5 +81,8 @@
   </data>
   <data name="Property_Counterparty" xml:space="preserve">
     <value>Counterparty</value>
+  </data>
+  <data name="Property_CouldRun" xml:space="preserve">
+    <value>CouldRun</value>
   </data>
 </root>

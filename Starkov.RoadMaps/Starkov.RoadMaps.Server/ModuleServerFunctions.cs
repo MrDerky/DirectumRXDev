@@ -8,6 +8,9 @@ namespace Starkov.RoadMaps.Server
 {
   public class ModuleFunctions
   {
-
+//    public IQueryable<InternalWorkProcesses.ICompanyRoadmapEventsStarkov> GetRunTodayRMEvents()
+//    {
+//      
+//    }
   }
 }

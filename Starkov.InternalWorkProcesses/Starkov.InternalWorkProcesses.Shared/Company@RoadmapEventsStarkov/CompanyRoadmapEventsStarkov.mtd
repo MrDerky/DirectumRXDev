@@ -22,9 +22,9 @@
     {
       "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
       "NameGuid": "4a92ef37-b8dc-47be-8592-c094e7fcd514",
-      "Name": "EventName",
+      "Name": "Name",
       "CanBeSearch": false,
-      "Code": "EventName",
+      "Code": "Name",
       "IsRequired": true,
       "Length": 512,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
@@ -33,9 +33,12 @@
     {
       "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
       "NameGuid": "58438d8a-e1ef-4022-92cc-8390cd6fe302",
-      "Name": "Date",
+      "Name": "Deadline",
       "CanBeSearch": false,
-      "Code": "Date",
+      "Code": "Deadline",
+      "HandledEvents": [
+        "ChangedShared"
+      ],
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
       "PreviousPropertyGuid": "4a92ef37-b8dc-47be-8592-c094e7fcd514"
@@ -43,11 +46,12 @@
     {
       "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
       "NameGuid": "3069794a-3f87-4075-af94-8d24b2a4b3b7",
-      "Name": "DaysComplete",
+      "Name": "DaysToComplete",
       "CanBeSearch": false,
-      "Code": "DaysComplete",
+      "Code": "DaysToComplete",
       "HandledEvents": [
-        "ValueInputClient"
+        "ValueInputClient",
+        "ChangedShared"
       ],
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
@@ -67,9 +71,9 @@
     {
       "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
       "NameGuid": "cc7967e1-c670-49d0-87da-316edec2beaf",
-      "Name": "EventStatus",
+      "Name": "Status",
       "CanBeSearch": false,
-      "Code": "EventStatus",
+      "Code": "Status",
       "EntityGuid": "8e474db3-c1d5-4623-b887-f6ff19472395",
       "FlatListInStandaloneLookup": true,
       "IsRequired": true,
@@ -84,6 +88,15 @@
       "Code": "Note",
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToTextBinder",
       "PreviousPropertyGuid": "cc7967e1-c670-49d0-87da-316edec2beaf"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "d32e801c-3b01-4d4c-bbac-5ff0dd13ed93",
+      "Name": "RunDate",
+      "CanBeSearch": false,
+      "Code": "RunDate",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "e8c26f38-f47e-4706-a68a-3b7bb2c02a53"
     }
   ],
   "PublicStructures": [],

@@ -7,8 +7,4 @@ using Starkov.RoadMaps.RoadmapEvent;
 
 namespace Starkov.RoadMaps
 {
-  partial class RoadmapEventClientHandlers
-  {
-
-  }
 }

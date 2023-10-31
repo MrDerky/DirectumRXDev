@@ -21,8 +21,8 @@ namespace Starkov.RoadMaps.Server
     {
       var roadMap = RoadmapEvents.Create();
       roadMap.EventName = name;
-      roadMap.Date = date;
-      roadMap.DaysComplete = daysComplete;
+      roadMap.Deadline = date;
+      roadMap.DaysToComplete = daysComplete;
       roadMap.Responsible = responsible;
       roadMap.EventStatus = EventStatuses.Get(eventStatusId) ?? EventStatuses.GetAll(x => x.Name == "Новое").FirstOrDefault();
       roadMap.Note = note;
@@ -48,8 +48,8 @@ namespace Starkov.RoadMaps.Server
       }
       
       roadMap.EventName = name;
-      roadMap.Date = date;
-      roadMap.DaysComplete = daysComplete;
+      roadMap.Deadline = date;
+      roadMap.DaysToComplete = daysComplete;
       roadMap.Responsible = responsible;
       roadMap.EventStatus = EventStatuses.Get(eventStatusId) ?? EventStatuses.GetAll(x => x.Name == "Новое").FirstOrDefault();
       roadMap.Note = note;
@@ -78,7 +78,7 @@ namespace Starkov.RoadMaps.Server
     {
       var today = Calendar.Now.Date;
       return Starkov.RoadMaps.RoadmapEvents.GetAll()
-        .Where(x => Equals(x.Date.GetValueOrDefault(), today.AddDays((double)x.DaysComplete.GetValueOrDefault())));
+        .Where(x => x.CouldRun.GetValueOrDefault() == today);
     }
     
   }
