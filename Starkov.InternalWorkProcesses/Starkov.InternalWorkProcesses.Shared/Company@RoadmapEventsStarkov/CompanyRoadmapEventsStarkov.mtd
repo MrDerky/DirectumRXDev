@@ -95,8 +95,6 @@
       "Name": "RunDate",
       "CanBeSearch": false,
       "Code": "RunDate",
-      "IsShowedInList": false,
-      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
       "PreviousPropertyGuid": "e8c26f38-f47e-4706-a68a-3b7bb2c02a53"
     }

@@ -4,16 +4,6 @@
   "Name": "Company",
   "Actions": [
     {
-      "NameGuid": "3f334f1e-d7a4-4ca5-bd1a-f26b35ccfae8",
-      "Name": "DeleteChildEntity",
-      "GenerateHandler": true,
-      "IsAncestorMetadata": true,
-      "Overridden": [
-        "GenerateHandler"
-      ],
-      "Versions": []
-    },
-    {
       "NameGuid": "0ad935f7-1253-40e7-a78b-3e354730458c",
       "Name": "TaskStarkov",
       "ActionArea": "ChildCollection",

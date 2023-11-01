@@ -30,7 +30,7 @@
             <property name="Name">Company_RoadmapEventsStarkov_Name</property>
             <property name="FieldName">Name</property>
             <property name="VisibleIndex">0</property>
-            <property name="Width">277</property>
+            <property name="Width">295</property>
             <property name="ActualWidth">28*</property>
           </property>
           <property name="Item2" isnull="true" iskey="true">
@@ -45,7 +45,7 @@
             <property name="Name">Company_RoadmapEventsStarkov_DaysToComplete</property>
             <property name="FieldName">DaysToComplete</property>
             <property name="VisibleIndex">2</property>
-            <property name="Width">79</property>
+            <property name="Width">84</property>
             <property name="ActualWidth">8*</property>
           </property>
           <property name="Item4" isnull="true" iskey="true">
@@ -53,7 +53,7 @@
             <property name="Name">Company_RoadmapEventsStarkov_Responsible</property>
             <property name="FieldName">Responsible</property>
             <property name="VisibleIndex">3</property>
-            <property name="Width">138</property>
+            <property name="Width">147</property>
             <property name="ActualWidth">14*</property>
           </property>
           <property name="Item5" isnull="true" iskey="true">
@@ -61,7 +61,7 @@
             <property name="Name">Company_RoadmapEventsStarkov_Status</property>
             <property name="FieldName">Status</property>
             <property name="VisibleIndex">4</property>
-            <property name="Width">138</property>
+            <property name="Width">147</property>
             <property name="ActualWidth">14*</property>
           </property>
           <property name="Item6" isnull="true" iskey="true">
@@ -69,7 +69,7 @@
             <property name="Name">Company_RoadmapEventsStarkov_Note</property>
             <property name="FieldName">Note</property>
             <property name="VisibleIndex">5</property>
-            <property name="Width">188</property>
+            <property name="Width">200</property>
             <property name="ActualWidth">19*</property>
           </property>
         </property>

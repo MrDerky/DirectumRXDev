@@ -25,7 +25,8 @@ namespace Starkov.InternalWorkProcesses
 
     public override void Showing(Sungero.Presentation.FormShowingEventArgs e)
     {
-//      base.Showing(e);
+      
+      base.Showing(e);
 //      var managersRole = Sungero.Docflow.PublicInitializationFunctions.Module.GetProjectManagersRole();
 //      var salesGroup = Sungero.CoreEntities.Groups.GetAll(x => x.Name == "Отдел продаж").FirstOrDefault();
 //

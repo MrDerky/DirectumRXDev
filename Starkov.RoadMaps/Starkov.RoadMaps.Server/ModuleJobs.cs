@@ -10,12 +10,12 @@ namespace Starkov.RoadMaps.Server
   {
 
     /// <summary>
-    /// Отбирает записи мероприятий дорожных карт для которых наступил срок выполнения
+    /// Создать задачи по мероприятиям дорожной карты
     /// </summary>
     public virtual void RoadmapsTask()
     {
       var rmEvents = PublicFunctions.Module.GetRunTodayRMEvents();
-      
+
       foreach(var e in rmEvents)
       {
         var task = InternalWorkProcesses.PublicFunctions.ActionItemExecutionTask.CreateTaskByRmEvent(e);
