@@ -19,7 +19,7 @@ namespace Starkov.RoadMaps.Server
       var today = Calendar.Today.Date;
       var query = InternalWorkProcesses.Companies.GetAll()
         .SelectMany(a => a.RoadmapEventsStarkov
-                    .Where(b => b.Status.Name != "Завершен" || a.Name != "В работе")
+                    .Where(b => b.Status.Executable)
                     .Where(c => Equals(c.RunDate, today)))
         .Cast<InternalWorkProcesses.ICompanyRoadmapEventsStarkov>();
       

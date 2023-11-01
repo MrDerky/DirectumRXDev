@@ -70,4 +70,7 @@
   <data name="CollectionDisplayName" xml:space="preserve">
     <value>EventStatuses</value>
   </data>
+  <data name="Property_Executable" xml:space="preserve">
+    <value>Create tasks for events</value>
+  </data>
 </root>

@@ -70,4 +70,7 @@
   <data name="CollectionDisplayName" xml:space="preserve">
     <value>Статусы мероприятий</value>
   </data>
+  <data name="Property_Executable" xml:space="preserve">
+    <value>Создавать задачи по мероприятиям</value>
+  </data>
 </root>
