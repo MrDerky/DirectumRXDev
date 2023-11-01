@@ -24,7 +24,6 @@ namespace Starkov.RoadMaps.Server
         .Cast<InternalWorkProcesses.ICompanyRoadmapEventsStarkov>();
       
       return query;
-      
     }
   }
 }
