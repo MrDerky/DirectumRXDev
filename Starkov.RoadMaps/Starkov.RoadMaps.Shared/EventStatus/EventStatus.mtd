@@ -27,7 +27,15 @@
         {
           "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
           "NameGuid": "da2e77ed-a170-420f-a47c-ee54a41bce99",
-          "Name": "ControlGroup"
+          "Name": "ControlGroup",
+          "ColumnDefinitions": [
+            {
+              "Percentage": 75.69
+            },
+            {
+              "Percentage": 24.31
+            }
+          ]
         },
         {
           "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
@@ -41,9 +49,25 @@
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "c902db70-6b2b-431e-b74c-7dc386582a37",
+          "Name": "Executable",
+          "ColumnNumber": 1,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+          "ParentGuid": "da2e77ed-a170-420f-a47c-ee54a41bce99",
+          "PropertyGuid": "375f62b9-613d-4cc6-8e62-65c01aaa0dbf",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
         }
       ]
     }
+  ],
+  "HandledEvents": [
+    "CreatedServer"
   ],
   "IconResourcesKeys": [],
   "IntegrationServiceName": "RoadMapsEventStatus",
@@ -71,8 +95,8 @@
     {
       "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
       "NameGuid": "375f62b9-613d-4cc6-8e62-65c01aaa0dbf",
-      "Name": "Executable",
-      "Code": "Executable",
+      "Name": "IsExecutable",
+      "Code": "IsExecutable",
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
       "PreviousPropertyGuid": "56da5f26-0564-4d19-912b-26094611eabb"
     }

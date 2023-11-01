@@ -7,4 +7,13 @@ using Starkov.RoadMaps.EventStatus;
 
 namespace Starkov.RoadMaps
 {
+  partial class EventStatusServerHandlers
+  {
+
+    public override void Created(Sungero.Domain.CreatedEventArgs e)
+    {
+      _obj.IsExecutable = false;
+    }
+  }
+
 }
