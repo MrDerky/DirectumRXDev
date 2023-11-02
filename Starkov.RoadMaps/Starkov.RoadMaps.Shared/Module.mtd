@@ -64,6 +64,10 @@
     {
       "ItemId": "8e474db3-c1d5-4623-b887-f6ff19472395",
       "PreviousItemId": "7fa49e5c-f065-4291-ad2d-66d3b5f5224e"
+    },
+    {
+      "ItemId": "681afd43-1f48-4054-8ec5-211611208ff8",
+      "PreviousItemId": "8e474db3-c1d5-4623-b887-f6ff19472395"
     }
   ],
   "HandledEvents": [
@@ -105,7 +109,24 @@
       "ReturnTypeFullName": "System.Nullable"
     },
     {
-      "Name": "GetRunTodayRMEvents",
+      "Name": "GetRmEventById",
+      "Parameters": [
+        {
+          "Name": "companyId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "eventId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
+      "ReturnTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetRunTodayRmEvents",
       "ReturnType": "global::System.Linq.IQueryable<global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov>",
       "ReturnTypeFullName": "System.Linq.IQueryable"
     }
@@ -113,7 +134,10 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Starkov.RoadMaps",
-  "ResourcesKeys": [],
+  "ResourcesKeys": [
+    "LockWarningTaskCompleted",
+    "LockWarningTaskStarted"
+  ],
   "ServerAssemblyName": "Starkov.RoadMaps.Server",
   "ServerNamespace": "Starkov.RoadMaps.Server",
   "SharedAssemblyName": "Starkov.RoadMaps.Shared",

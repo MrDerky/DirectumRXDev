@@ -10,6 +10,17 @@
   "IsChildEntity": true,
   "Properties": [
     {
+      "$type": "Sungero.Metadata.LongIntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "d7319199-3333-49cc-a7b9-8467617ccf20",
+      "Name": "Id",
+      "IsAncestorMetadata": true,
+      "IsIdentifier": true,
+      "IsUnique": true,
+      "Overridden": [
+        "IsShowedInList"
+      ]
+    },
+    {
       "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
       "NameGuid": "7a8103a4-d464-41f0-b94d-514ea5c2d878",
       "Name": "Company",
@@ -97,6 +108,15 @@
       "Code": "RunDate",
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
       "PreviousPropertyGuid": "e8c26f38-f47e-4706-a68a-3b7bb2c02a53"
+    },
+    {
+      "$type": "Sungero.Metadata.LongIntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "b4886f3c-1ec2-4055-a2de-bc7f71358fdf",
+      "Name": "CurrentTaskId",
+      "CanBeSearch": false,
+      "Code": "CurrentTaskId",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "d32e801c-3b01-4d4c-bbac-5ff0dd13ed93"
     }
   ],
   "PublicStructures": [],

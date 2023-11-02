@@ -58,4 +58,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LockWarningTaskCompleted" xml:space="preserve">
+    <value>Source: {0}; Message: Unable to handle roadmap event (id: {1}) after the task is completed; Reason: Company entity (id: {2}) is locked;</value>
+  </data>
+  <data name="LockWarningTaskStarted" xml:space="preserve">
+    <value>Source: {0}; Message: Unable to handle roadmap event (id: {1}) after starting the task; Reason: Company entity (id: {2}) is locked;</value>
+  </data>
 </root>

@@ -58,28 +58,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Property_Name" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="Property_Deadline" xml:space="preserve">
-    <value>Deadline</value>
-  </data>
-  <data name="Property_DaysToComplete" xml:space="preserve">
-    <value>DaysToComplete</value>
-  </data>
-  <data name="Property_Responsible" xml:space="preserve">
-    <value>Responsible</value>
-  </data>
-  <data name="Property_Status" xml:space="preserve">
-    <value>Status</value>
-  </data>
-  <data name="Property_Note" xml:space="preserve">
-    <value>Note</value>
-  </data>
-  <data name="Property_RunDate" xml:space="preserve">
-    <value>Run date</value>
-  </data>
-  <data name="Property_CurrentTaskId" xml:space="preserve">
-    <value>CurrentTaskId</value>
-  </data>
 </root>

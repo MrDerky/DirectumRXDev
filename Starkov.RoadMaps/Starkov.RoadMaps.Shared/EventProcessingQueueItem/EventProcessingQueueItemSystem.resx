@@ -61,25 +61,25 @@
   <data name="Property_Name" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="Property_Deadline" xml:space="preserve">
-    <value>Deadline</value>
+  <data name="Property_Type" xml:space="preserve">
+    <value>Type</value>
   </data>
-  <data name="Property_DaysToComplete" xml:space="preserve">
-    <value>DaysToComplete</value>
+  <data name="Enum_Type_TaskStarted" xml:space="preserve">
+    <value>TaskStarted</value>
   </data>
-  <data name="Property_Responsible" xml:space="preserve">
-    <value>Responsible</value>
+  <data name="Enum_Type_TaskCompleted" xml:space="preserve">
+    <value>TaskCompleted</value>
   </data>
-  <data name="Property_Status" xml:space="preserve">
-    <value>Status</value>
+  <data name="Property_CompanyId" xml:space="preserve">
+    <value>CompanyId</value>
   </data>
-  <data name="Property_Note" xml:space="preserve">
-    <value>Note</value>
+  <data name="Property_EventId" xml:space="preserve">
+    <value>EventId</value>
   </data>
-  <data name="Property_RunDate" xml:space="preserve">
-    <value>Run date</value>
+  <data name="Property_EventStatusId" xml:space="preserve">
+    <value>EventStatusId</value>
   </data>
-  <data name="Property_CurrentTaskId" xml:space="preserve">
-    <value>CurrentTaskId</value>
+  <data name="Property_TaskId" xml:space="preserve">
+    <value>TaskId</value>
   </data>
 </root>
