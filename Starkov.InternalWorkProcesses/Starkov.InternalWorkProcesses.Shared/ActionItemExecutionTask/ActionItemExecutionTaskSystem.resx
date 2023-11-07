@@ -67,4 +67,10 @@
   <data name="Block_4eb2469f1f014803b491f938aefbcb2d" xml:space="preserve">
     <value>Handle event</value>
   </data>
+  <data name="Property_IsRoadmapTaskStarkov" xml:space="preserve">
+    <value>Is roadmapt task</value>
+  </data>
+  <data name="Block_4eb2469f1f014803b491f938aefbcb2d_Property_6c4ed22b8f084bbdb0d9bc05ec5ca143" xml:space="preserve">
+    <value>New event status</value>
+  </data>
 </root>

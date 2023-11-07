@@ -30,8 +30,10 @@ namespace Starkov.RoadMaps.Server
     
     //TODO добавить summary
     [Public]
-    public InternalWorkProcesses.ICompanyRoadmapEventsStarkov GetRmEventById(long companyId, long eventId)
+    public InternalWorkProcesses.ICompanyRoadmapEventsStarkov GetRmEventByCompanyIdAndId(long companyId, long eventId)
     {
+      
+      
       return InternalWorkProcesses.Companies
         .GetAll(a => a.Id == companyId)
         .FirstOrDefault()?
@@ -39,5 +41,39 @@ namespace Starkov.RoadMaps.Server
         .FirstOrDefault(b => b.Id == eventId);
       
     }
+    
+    
+    //TODO добавить summary
+    [Public]
+    public InternalWorkProcesses.ICompanyRoadmapEventsStarkov GetEventByTask(InternalWorkProcesses.IActionItemExecutionTask task)
+    {
+      var rmEvent = InternalWorkProcesses.Companies.GetAll()
+        .FirstOrDefault(a => a.Id == task.CompanyGroup.Companies.FirstOrDefault().Id)
+        ?.RoadmapEventsStarkov
+        .FirstOrDefault(b => b.CurrentTaskId == task.Id);
+      
+      if (rmEvent == null)
+        return rmEvent;
+      
+      var queueItem = RoadMaps.PublicFunctions.EventProcessingQueueItem.GetStartedQueueItemByTaskId(task.Id);
+      return GetRmEventByCompanyIdAndId(queueItem.CompanyId.GetValueOrDefault(), queueItem.EventId.GetValueOrDefault());
+    }
+    
+    
+    // TODO добавить summary
+    [Public]
+    public void HandleCompletedRoadMapEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, IEventStatus status)
+    {
+      // Проверить родителя на наличие блокировок
+      if (Functions.Module.IsEventRootLocked(rmEvent, this.ToString(), RoadMaps.Resources.LockWarningTaskCompleted))
+      {
+        Functions.EventProcessingQueueItem.CreateQueueItemByEvent(rmEvent, null, status.Id);
+        return;  
+      }
+      
+      rmEvent.Status = status;
+      rmEvent.CurrentTaskId = null;
+    }
+    
   }
 }

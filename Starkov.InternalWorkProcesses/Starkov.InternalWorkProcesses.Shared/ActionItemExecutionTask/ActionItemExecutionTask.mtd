@@ -74,6 +74,20 @@
   ],
   "Blocks": [
     {
+      "$type": "Sungero.Metadata.AssignmentBlockMetadata, Sungero.Workflow.Shared",
+      "NameGuid": "22d5a971-8b50-4a5b-bb8e-45b60939a310",
+      "Name": "ExecuteActionItemBlock",
+      "BaseGuid": "d7933064-9ea2-4fd1-861d-bb5ec9ae8487",
+      "EntityType": "d238ef51-607e-46a5-b86a-ede4482f7f19",
+      "LayeredFromGuid": "d7933064-9ea2-4fd1-861d-bb5ec9ae8487",
+      "Overridden": [
+        "HandledEvents",
+        "LayeredFromGuid",
+        "IsGenerated"
+      ],
+      "Properties": []
+    },
+    {
       "$type": "Sungero.Metadata.ScriptBlockMetadata, Sungero.Workflow.Shared",
       "NameGuid": "4eb2469f-1f01-4803-b491-f938aefbcb2d",
       "Name": "HandleEventStarkov",
@@ -81,7 +95,15 @@
       "HandledEvents": [
         "HandleEventStarkovExecute"
       ],
-      "Properties": []
+      "Properties": [
+        {
+          "$type": "Sungero.Metadata.NavigationBlockPropertyMetadata, Sungero.Metadata",
+          "NameGuid": "6c4ed22b-8f08-4bbd-b0d9-bc05ec5ca143",
+          "Name": "NewEventStatusStarkov",
+          "EntityGuid": "8e474db3-c1d5-4623-b887-f6ff19472395",
+          "PreviousPropertyGuid": "5dc92a72-3a65-4872-bc04-0aa7ec353b05"
+        }
+      ]
     }
   ],
   "CanBeNavigationPropertyType": true,
@@ -200,6 +222,16 @@
         "EntityGuid"
       ],
       "Versions": []
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "9fb165d8-a627-4142-a4f4-03d804f7bc4b",
+      "Name": "IsRoadmapTaskStarkov",
+      "Code": "IsRoadmapTask",
+      "IsEnabled": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "cc7884af-68c4-4974-9c67-bab4e54874aa"
     }
   ],
   "PublicFunctions": [
@@ -212,6 +244,20 @@
           "ParameterTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
         }
       ],
+      "ReturnType": "global::Starkov.InternalWorkProcesses.IActionItemExecutionTask",
+      "ReturnTypeFullName": "Starkov.InternalWorkProcesses.IActionItemExecutionTask, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetTaskById",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "id",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "Placement": "Shared",
       "ReturnType": "global::Starkov.InternalWorkProcesses.IActionItemExecutionTask",
       "ReturnTypeFullName": "Starkov.InternalWorkProcesses.IActionItemExecutionTask, Sungero.Domain.Interfaces"
     }

@@ -1,0 +1,33 @@
+{
+  "$type": "Sungero.NoCode.Settings.Models.SettingsLayerLocalization, Sungero.NoCode.Settings.Interfaces",
+  "Subject_SE_3": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "{0}",
+    "ru-RU": "{0}"
+  },
+  "ThreadSubject_SE_3": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Notice of action item execution",
+    "ru-RU": "Уведомление о создании поручения"
+  },
+  "Subject_SE_6": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "{0}",
+    "ru-RU": "{0}"
+  },
+  "ThreadSubject_SE_6": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Accept work by supervisor",
+    "ru-RU": "Приемка работ контролером"
+  },
+  "Subject_SE_4": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "{0}",
+    "ru-RU": "{0}"
+  },
+  "ThreadSubject_SE_4": {
+    "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+    "default": "Execution of action item",
+    "ru-RU": "Исполнение поручения"
+  }
+}

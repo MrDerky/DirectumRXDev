@@ -20,6 +20,7 @@ namespace Starkov.InternalWorkProcesses.Server
       task.Supervisor = rmEvent.Company.Responsible; // Может быть null?
       task.AssignedBy = task.Supervisor; // Возможно просто изменить обязательность в компании
       task.Deadline = rmEvent.Deadline;
+      task.IsRoadmapTaskStarkov = true;
       
       task.CompanyGroup.Companies.Add(InternalWorkProcesses.Companies.As(rmEvent.RootEntity));
       task.ActiveText = string.Format("{0} в срок {1}. {2}", rmEvent.Name, rmEvent.Deadline, rmEvent.Note);
@@ -28,6 +29,12 @@ namespace Starkov.InternalWorkProcesses.Server
       return task;
       //TODO Добавить формирование имени
       
+    }
+    
+    [Remote(IsPure = true), Public]
+    public static InternalWorkProcesses.IActionItemExecutionTask GetTaskById(long id)
+    {
+      return ActionItemExecutionTasks.GetAll().FirstOrDefault(a => a.Id == id);
     }
   }
 }

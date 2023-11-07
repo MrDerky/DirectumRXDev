@@ -22,5 +22,20 @@ namespace Starkov.RoadMaps.Shared
       
       return date.GetValueOrDefault().Subtract(TimeSpan.FromDays((double)daysCount));
     }
+    
+    /// <summary>
+    /// Проверить родительскую сущность на наличие блокировки
+    /// </summary>
+    /// <param name="rmEvent">Сущность мероприятия</param>
+    /// <param name="message">Шаблон сообщения для логгера</param>
+    /// <returns>Если сущность заблокирована - True, если нет - False</returns>
+    public bool IsEventRootLocked(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, string message, string source)
+    {
+      var result = Locks.GetLockInfo(rmEvent.RootEntity).IsLocked;
+      if (result)
+        Logger.DebugFormat(message, source, rmEvent.Id, rmEvent.RootEntity.Id);
+      
+      return result;
+    }
   }
 }

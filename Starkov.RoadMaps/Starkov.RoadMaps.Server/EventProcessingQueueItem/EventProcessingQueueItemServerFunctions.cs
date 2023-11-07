@@ -9,8 +9,8 @@ namespace Starkov.RoadMaps.Server
 {
   partial class EventProcessingQueueItemFunctions
   {
-   
-    //TODO добавить summary    
+    
+    //TODO добавить summary
     [Public]
     public static void CreateQueueItemByEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, long? taskId, long? eventStatusId)
     {
@@ -23,6 +23,21 @@ namespace Starkov.RoadMaps.Server
       item.TaskId = taskId;
       
       item.Save();
+    }
+    
+    //TODO добавить summary
+    [Public]
+    public static IEventProcessingQueueItem GetStartedQueueItemByTaskId(long id)
+    {
+      return EventProcessingQueueItems.GetAll().Where(b => b.Type == RoadMaps.EventProcessingQueueItem.Type.TaskStarted).FirstOrDefault(a => a.TaskId == id);
+    }
+    
+    // TODO добавить summary
+    public static bool IsQueueItemByCompletedEventAndNewStatusId(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, long statusId)
+    {
+      return EventProcessingQueueItems.GetAll().Where(a => a.EventId == rmEvent.Id)
+        .Where(b => b.EventStatusId == statusId)
+        .Any(c => c.Type == RoadMaps.EventProcessingQueueItem.Type.TaskCompleted);
     }
   }
 }

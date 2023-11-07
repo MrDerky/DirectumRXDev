@@ -134,6 +134,18 @@
       ],
       "ReturnType": "void",
       "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GetStartedQueueItemByTaskId",
+      "Parameters": [
+        {
+          "Name": "id",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::Starkov.RoadMaps.IEventProcessingQueueItem",
+      "ReturnTypeFullName": "Starkov.RoadMaps.IEventProcessingQueueItem, Sungero.Domain.Interfaces"
     }
   ],
   "PublicStructures": [],

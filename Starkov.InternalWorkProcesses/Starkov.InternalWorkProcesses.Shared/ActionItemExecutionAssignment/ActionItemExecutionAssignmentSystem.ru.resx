@@ -58,4 +58,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Resource_f2fa16259c7d4f8ca19287ec6375af3f" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_f2fa16259c7d4f8ca19287ec6375af3f_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_b1013c53ba944f279dd250aa0e5b927f" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_8e932fec30e44909bcbf41f92488d006" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_8e932fec30e44909bcbf41f92488d006_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_bd78fd1f00144cb3b86277e3ddfc7609" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_bd78fd1f00144cb3b86277e3ddfc7609_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_23bc4bb048724e98b2ba75e9072a2cf0" xml:space="preserve">
+    <value>Основное</value>
+  </data>
+  <data name="ControlGroup_c51f7fd684e742858ac33a85d7174e9d" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_e53cb8cab9344496be1301f0deefdbe7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_472b70ad4bc24778bc203eb57326dd9f" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_8474eea3a99c4c2c9fe2086d9ca84a5e" xml:space="preserve">
+    <value>Пояснение</value>
+  </data>
+  <data name="Resource_1132e4e0f0dd4452bc4c2384b1935a7e" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -9,6 +9,7 @@ namespace Starkov.InternalWorkProcesses.Shared
 {
   partial class ActionItemExecutionAssignmentFunctions
   {
-
   }
+  
+  
 }

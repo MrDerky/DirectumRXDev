@@ -43,7 +43,7 @@ namespace Starkov.RoadMaps.Server
     /// <param name="item">Элемент очереди</param>
     private void HandleQueueItem(IEventProcessingQueueItem item)
     {
-      var rmEvent = RoadMaps.PublicFunctions.Module.GetRmEventById(item.CompanyId.GetValueOrDefault(), item.EventId.GetValueOrDefault());
+      var rmEvent = RoadMaps.PublicFunctions.Module.GetRmEventByCompanyIdAndId(item.CompanyId.GetValueOrDefault(), item.EventId.GetValueOrDefault());
       
       if (item.Type == RoadMaps.EventProcessingQueueItem.Type.TaskStarted)
         HandleRunningEvent(rmEvent, item, null);
@@ -83,10 +83,11 @@ namespace Starkov.RoadMaps.Server
     /// <param name="rmEvent">Мероприятие</param>
     /// <param name="item">Элемент очереди</param>
     private void HandleCompletedEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, IEventProcessingQueueItem item)
-    {
+    { 
       if (IsLocked(rmEvent, RoadMaps.Resources.LockWarningTaskCompleted))
         return;
       
+      rmEvent.Status = EventStatuses.GetAll().FirstOrDefault(a => a.Id == item.EventStatusId);
       rmEvent.CurrentTaskId = null;
       RoadMaps.EventProcessingQueueItems.Delete(item);
     }
@@ -100,11 +101,7 @@ namespace Starkov.RoadMaps.Server
     /// <returns>Если сущность заблокирована - True, если нет - False</returns>
     private bool IsLocked(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, string message)
     {
-      var result = Locks.GetLockInfo(rmEvent.RootEntity).IsLocked;
-      if (result)
-        Logger.DebugFormat(message, this.ToString(), rmEvent.Id, rmEvent.RootEntity.Id);
-      
-      return result;
+      return Functions.Module.IsEventRootLocked(rmEvent, RoadMaps.Resources.LockWarningTaskCompleted, this.ToString());
     }
 
   }

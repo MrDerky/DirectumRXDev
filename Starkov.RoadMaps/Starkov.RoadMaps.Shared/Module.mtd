@@ -109,7 +109,19 @@
       "ReturnTypeFullName": "System.Nullable"
     },
     {
-      "Name": "GetRmEventById",
+      "Name": "GetEventByTask",
+      "Parameters": [
+        {
+          "Name": "task",
+          "ParameterType": "global::Starkov.InternalWorkProcesses.IActionItemExecutionTask",
+          "ParameterTypeFullName": "Starkov.InternalWorkProcesses.IActionItemExecutionTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
+      "ReturnTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetRmEventByCompanyIdAndId",
       "Parameters": [
         {
           "Name": "companyId",
@@ -129,6 +141,23 @@
       "Name": "GetRunTodayRmEvents",
       "ReturnType": "global::System.Linq.IQueryable<global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov>",
       "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "HandleCompletedRoadMapEvent",
+      "Parameters": [
+        {
+          "Name": "rmEvent",
+          "ParameterType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
+          "ParameterTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "status",
+          "ParameterType": "global::Starkov.RoadMaps.IEventStatus",
+          "ParameterTypeFullName": "Starkov.RoadMaps.IEventStatus, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
     }
   ],
   "PublicStructures": [],
