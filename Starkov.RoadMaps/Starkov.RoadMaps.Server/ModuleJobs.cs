@@ -14,10 +14,15 @@ namespace Starkov.RoadMaps.Server
     /// </summary>
     public virtual void RoadmapsTask()
     {
+      // TODO Протестировать обработку очереди, какое будет поведение если в очереди будут накапливаться события, 
+      // что если события закрытия мероприятия будут обрабатываться раньше чем открытия
+      
+      // Обработка очереди отложенных задания
       var queue = EventProcessingQueueItems.GetAll();
       foreach (var i in queue)
         HandleQueueItem(i);
       
+      // Обработка мероприятий
       var rmEvents = PublicFunctions.Module.GetRunTodayRmEvents();
       foreach(var e in rmEvents)
       {
