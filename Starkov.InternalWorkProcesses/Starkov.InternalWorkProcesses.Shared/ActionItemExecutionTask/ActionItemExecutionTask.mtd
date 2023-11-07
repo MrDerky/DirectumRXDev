@@ -3,6 +3,68 @@
   "NameGuid": "7fb32d27-bc23-48d2-a88e-f56e6d97b5c1",
   "Name": "ActionItemExecutionTask",
   "AccessRightsMode": "Both",
+  "AttachmentGroups": [
+    {
+      "NameGuid": "680822ef-73a3-4ae2-9208-dfdc29e15909",
+      "Name": "CompanyByEventGroup",
+      "Constraints": [
+        {
+          "NameGuid": "6f6124b7-f8d8-4a4d-9a26-632f1bd7b778",
+          "Name": "Companies",
+          "ConstraintTypeId": "0e3bd491-98e0-474c-a777-ebc065389340"
+        }
+      ],
+      "IsEnabled": false
+    },
+    {
+      "NameGuid": "804f50fe-f3da-411b-bb2e-e5373936e029",
+      "Name": "DocumentsGroup",
+      "Constraints": [],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "Title",
+        "Description",
+        "PreviousGroupId"
+      ],
+      "PreviousGroupId": "680822ef-73a3-4ae2-9208-dfdc29e15909",
+      "Versions": []
+    },
+    {
+      "NameGuid": "d44a8df5-3fe9-4a1b-a5a0-e8aaa65820da",
+      "Name": "AddendaGroup",
+      "CanDeleteTaskFamilyAttachments": true,
+      "Constraints": [],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "Title",
+        "Description"
+      ],
+      "Versions": []
+    },
+    {
+      "NameGuid": "13a98dcd-c5ec-4fd0-a682-424613f615d4",
+      "Name": "OtherGroup",
+      "CanDeleteTaskFamilyAttachments": true,
+      "Constraints": [],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "Title",
+        "Description"
+      ],
+      "Versions": []
+    },
+    {
+      "NameGuid": "6977b087-9b93-4527-9d0f-24d0e8b7ce88",
+      "Name": "ResultGroup",
+      "Constraints": [],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "Title",
+        "Description"
+      ],
+      "Versions": []
+    }
+  ],
   "BaseGuid": "c290b098-12c7-487d-bb38-73e2c98f9789",
   "BlockIds": [
     "9",
@@ -39,6 +101,9 @@
       ],
       "Versions": []
     }
+  ],
+  "HandledEvents": [
+    "ShowingClient"
   ],
   "IconResourcesKeys": [],
   "IsVisibleThreadText": true,

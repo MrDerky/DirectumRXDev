@@ -7,8 +7,4 @@ using Starkov.InternalWorkProcesses.ActionItemExecutionTask;
 
 namespace Starkov.InternalWorkProcesses
 {
-  partial class ActionItemExecutionTaskSharedHandlers
-  {
-
-  }
 }

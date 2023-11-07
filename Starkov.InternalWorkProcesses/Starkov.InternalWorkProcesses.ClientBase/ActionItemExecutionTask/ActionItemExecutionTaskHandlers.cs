@@ -10,5 +10,13 @@ namespace Starkov.InternalWorkProcesses
   partial class ActionItemExecutionTaskClientHandlers
   {
 
+    public override void Showing(Sungero.Presentation.FormShowingEventArgs e)
+    {
+      base.Showing(e);
+      
+      // Утсановка видимости вложений компании
+      _obj.State.Attachments.CompanyByEventGroup.IsVisible = _obj.CompanyByEventGroup.Companies.Any();
+    }
+
   }
 }
