@@ -15,7 +15,7 @@ namespace Starkov.InternalWorkProcesses
       base.Showing(e);
       
       // Утсановка видимости вложений компании
-      _obj.State.Attachments.CompanyByEventGroup.IsVisible = _obj.CompanyByEventGroup.Companies.Any();
+      _obj.State.Attachments.CompanyGroup.IsVisible = _obj.CompanyGroup.Companies.Any();
     }
 
   }

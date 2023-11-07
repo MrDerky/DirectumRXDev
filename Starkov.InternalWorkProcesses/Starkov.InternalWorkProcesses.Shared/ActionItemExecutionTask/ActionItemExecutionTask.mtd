@@ -6,7 +6,7 @@
   "AttachmentGroups": [
     {
       "NameGuid": "680822ef-73a3-4ae2-9208-dfdc29e15909",
-      "Name": "CompanyByEventGroup",
+      "Name": "CompanyGroup",
       "Constraints": [
         {
           "NameGuid": "6f6124b7-f8d8-4a4d-9a26-632f1bd7b778",
@@ -72,7 +72,18 @@
     "110",
     "113"
   ],
-  "Blocks": [],
+  "Blocks": [
+    {
+      "$type": "Sungero.Metadata.ScriptBlockMetadata, Sungero.Workflow.Shared",
+      "NameGuid": "4eb2469f-1f01-4803-b491-f938aefbcb2d",
+      "Name": "HandleEventStarkov",
+      "BaseGuid": "1f76cc5d-f096-4062-b34a-51b3c02269f2",
+      "HandledEvents": [
+        "HandleEventStarkovExecute"
+      ],
+      "Properties": []
+    }
+  ],
   "CanBeNavigationPropertyType": true,
   "CreationAreaMetadata": {
     "NameGuid": "3a710e98-f782-4479-b7ce-e07b8fc8d6eb",

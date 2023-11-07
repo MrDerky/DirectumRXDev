@@ -58,10 +58,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AttachmentGroup_CompanyByEventGroupTitle" xml:space="preserve">
+  <data name="AttachmentGroup_CompanyGroupTitle" xml:space="preserve">
     <value>Компания по мероприятию</value>
   </data>
-  <data name="AttachmentGroup_CompanyByEventGroupInformationMessage" xml:space="preserve">
+  <data name="AttachmentGroup_CompanyGroupInformationMessage" xml:space="preserve">
     <value />
+  </data>
+  <data name="Block_4eb2469f1f014803b491f938aefbcb2d" xml:space="preserve">
+    <value>Handle event</value>
   </data>
 </root>

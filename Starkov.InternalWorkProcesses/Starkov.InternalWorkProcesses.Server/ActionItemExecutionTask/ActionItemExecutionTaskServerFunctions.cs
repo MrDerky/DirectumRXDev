@@ -21,7 +21,7 @@ namespace Starkov.InternalWorkProcesses.Server
       task.AssignedBy = task.Supervisor; // Возможно просто изменить обязательность в компании
       task.Deadline = rmEvent.Deadline;
       
-      task.CompanyByEventGroup.Companies.Add(InternalWorkProcesses.Companies.As(rmEvent.RootEntity));
+      task.CompanyGroup.Companies.Add(InternalWorkProcesses.Companies.As(rmEvent.RootEntity));
       task.ActiveText = string.Format("{0} в срок {1}. {2}", rmEvent.Name, rmEvent.Deadline, rmEvent.Note);
       task.Subject = string.Format("Исполнение мероприятий дорожной карты по «{0}»", rmEvent.Company);
       
