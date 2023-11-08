@@ -61,4 +61,10 @@
   <data name="Property_Name" xml:space="preserve">
     <value>Имя</value>
   </data>
+  <data name="Enum_Type_TaskStarted" xml:space="preserve">
+    <value>TaskStarted</value>
+  </data>
+  <data name="Enum_Type_TaskCompleted" xml:space="preserve">
+    <value>TaskCompleted</value>
+  </data>
 </root>

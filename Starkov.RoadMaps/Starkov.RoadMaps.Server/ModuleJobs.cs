@@ -13,22 +13,19 @@ namespace Starkov.RoadMaps.Server
     /// Обработать мероприятия дорожной карты
     /// </summary>
     public virtual void RoadmapsTask()
-    {
-      // TODO Протестировать обработку очереди, какое будет поведение если в очереди будут накапливаться события, 
-      // что если события закрытия мероприятия будут обрабатываться раньше чем открытия
-      
-      // Обработка очереди отложенных задания
-      var queue = EventProcessingQueueItems.GetAll();
+    {      
+      // Обработка мероприятий по очереди заданий
+      var queue = Functions.EventProcessingQueueItem.GetLastQueueItemsByEvent();
       foreach (var i in queue)
         HandleQueueItem(i);
       
-      // Обработка мероприятий
+      // Обработка мероприятий 
       var rmEvents = PublicFunctions.Module.GetRunTodayRmEvents();
       foreach(var e in rmEvents)
       {
         if (queue.Any(a => a.EventId == e.Id))
           continue;
-        
+
         var task = InternalWorkProcesses.PublicFunctions.ActionItemExecutionTask.CreateTaskByRmEvent(e);
         //HACK Если запускать обработку мероприятия после запуска задачи, то установка id текущей задачи в мероприятие не происходит
         HandleRunningEvent(e, null, task.Id);
@@ -61,7 +58,7 @@ namespace Starkov.RoadMaps.Server
     private void HandleRunningEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, IEventProcessingQueueItem item, long? inputTaskId)
     {
       if (item == null)
-      { 
+      {
         if (IsLocked(rmEvent, RoadMaps.Resources.LockWarningTaskStarted))
           RoadMaps.PublicFunctions.EventProcessingQueueItem.CreateQueueItemByEvent(rmEvent, inputTaskId, null);
         else
@@ -73,7 +70,7 @@ namespace Starkov.RoadMaps.Server
           return;
         
         rmEvent.CurrentTaskId = item.TaskId;
-        RoadMaps.EventProcessingQueueItems.Delete(item);
+        Functions.EventProcessingQueueItem.RemoveQueueItemsByEventId(item.EventId.GetValueOrDefault());
       }
     }
     
@@ -83,13 +80,14 @@ namespace Starkov.RoadMaps.Server
     /// <param name="rmEvent">Мероприятие</param>
     /// <param name="item">Элемент очереди</param>
     private void HandleCompletedEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, IEventProcessingQueueItem item)
-    { 
+    {
       if (IsLocked(rmEvent, RoadMaps.Resources.LockWarningTaskCompleted))
         return;
       
       rmEvent.Status = EventStatuses.GetAll().FirstOrDefault(a => a.Id == item.EventStatusId);
       rmEvent.CurrentTaskId = null;
-      RoadMaps.EventProcessingQueueItems.Delete(item);
+      
+      Functions.EventProcessingQueueItem.RemoveQueueItemsByEventId(item.EventId.GetValueOrDefault());
     }
     
     

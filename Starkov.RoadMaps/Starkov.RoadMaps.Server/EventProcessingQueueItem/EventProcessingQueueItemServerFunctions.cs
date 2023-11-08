@@ -18,7 +18,9 @@ namespace Starkov.RoadMaps.Server
       
       item.EventId = rmEvent.Id;
       item.CompanyId = rmEvent.RootEntity.Id;
-      item.Type = taskId.HasValue ? RoadMaps.EventProcessingQueueItem.Type.TaskStarted : RoadMaps.EventProcessingQueueItem.Type.TaskCompleted;
+      item.Type = taskId.HasValue
+        ? RoadMaps.EventProcessingQueueItem.Type.TaskStarted
+        : RoadMaps.EventProcessingQueueItem.Type.TaskCompleted;
       item.EventStatusId = eventStatusId;
       item.TaskId = taskId;
       
@@ -29,15 +31,34 @@ namespace Starkov.RoadMaps.Server
     [Public]
     public static IEventProcessingQueueItem GetStartedQueueItemByTaskId(long id)
     {
-      return EventProcessingQueueItems.GetAll().Where(b => b.Type == RoadMaps.EventProcessingQueueItem.Type.TaskStarted).FirstOrDefault(a => a.TaskId == id);
+      return EventProcessingQueueItems.GetAll()
+        .Where(b => b.Type == RoadMaps.EventProcessingQueueItem.Type.TaskStarted)
+        .FirstOrDefault(a => a.TaskId == id);
     }
     
-    // TODO добавить summary
-    public static bool IsQueueItemByCompletedEventAndNewStatusId(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, long statusId)
+    //TODO добавить summary
+    public static System.Collections.Generic.IEnumerable<RoadMaps.IEventProcessingQueueItem> GetLastQueueItemsByEvent()
     {
-      return EventProcessingQueueItems.GetAll().Where(a => a.EventId == rmEvent.Id)
-        .Where(b => b.EventStatusId == statusId)
-        .Any(c => c.Type == RoadMaps.EventProcessingQueueItem.Type.TaskCompleted);
+      var itemGrups = EventProcessingQueueItems.GetAll().GroupBy(a => a.EventId);
+      var items = new List<RoadMaps.IEventProcessingQueueItem>();
+      
+      foreach (var ig in itemGrups)
+      {
+        var maxDate = ig.Select(a => a.CreateDateTime).Max();
+        items.Add(ig.FirstOrDefault(a => a.CreateDateTime == maxDate));
+      }
+        
+      return items;
     }
+    
+    //TODO добавить summary
+    public static void RemoveQueueItemsByEventId(long id)
+    {
+      var items = EventProcessingQueueItems.GetAll().Where(a => a.EventId == id);
+      
+      foreach (var i in items)
+        EventProcessingQueueItems.Delete(i);
+    }
+
   }
 }

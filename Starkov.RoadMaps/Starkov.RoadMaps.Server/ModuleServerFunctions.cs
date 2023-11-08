@@ -52,7 +52,7 @@ namespace Starkov.RoadMaps.Server
         ?.RoadmapEventsStarkov
         .FirstOrDefault(b => b.CurrentTaskId == task.Id);
       
-      if (rmEvent == null)
+      if (rmEvent != null)
         return rmEvent;
       
       var queueItem = RoadMaps.PublicFunctions.EventProcessingQueueItem.GetStartedQueueItemByTaskId(task.Id);
@@ -73,6 +73,7 @@ namespace Starkov.RoadMaps.Server
       
       rmEvent.Status = status;
       rmEvent.CurrentTaskId = null;
+      Functions.EventProcessingQueueItem.RemoveQueueItemsByEventId(rmEvent.Id);
     }
     
   }

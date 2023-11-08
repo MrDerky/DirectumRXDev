@@ -7,4 +7,13 @@ using Starkov.RoadMaps.EventProcessingQueueItem;
 
 namespace Starkov.RoadMaps
 {
+  partial class EventProcessingQueueItemServerHandlers
+  {
+
+    public override void Created(Sungero.Domain.CreatedEventArgs e)
+    {
+      _obj.CreateDateTime = Calendar.Now;
+    }
+  }
+
 }
