@@ -9,6 +9,15 @@ namespace Starkov.RoadMaps.Server
 {
   partial class EventStatusFunctions
   {
-
+    
+    /// <summary>
+    /// Получить статус, установленный как статус по умолчанию
+    /// </summary>
+    /// <returns>Статус по умолчанию</returns>
+    [Remote, Public]
+    public static IEventStatus GetDefaultStatus()
+    {
+      return EventStatuses.GetAll().FirstOrDefault(a => a.IsDefault.GetValueOrDefault());
+    }
   }
 }

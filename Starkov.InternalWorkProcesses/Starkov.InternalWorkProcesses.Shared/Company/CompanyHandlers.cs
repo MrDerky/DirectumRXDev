@@ -28,8 +28,8 @@ namespace Starkov.InternalWorkProcesses
 
     public virtual void RoadmapEventsStarkovAdded(Sungero.Domain.Shared.CollectionPropertyAddedEventArgs e)
     {
-      _added.Responsible = _obj.Responsible != null ? _obj.Responsible : Sungero.Company.Employees.As(Users.Current);
-      _added.Status = Starkov.RoadMaps.EventStatuses.GetAll(x => x.Name == "Новое").FirstOrDefault();
+      _added.Responsible = _obj.Responsible ?? Sungero.Company.Employees.Current;
+      _added.Status = RoadMaps.PublicFunctions.EventStatus.Remote.GetDefaultStatus();
     }
   }
 }

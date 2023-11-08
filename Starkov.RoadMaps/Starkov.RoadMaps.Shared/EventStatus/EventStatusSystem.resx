@@ -73,4 +73,7 @@
   <data name="Property_IsExecutable" xml:space="preserve">
     <value>Create tasks for events</value>
   </data>
+  <data name="Property_IsDefault" xml:space="preserve">
+    <value>Is default</value>
+  </data>
 </root>

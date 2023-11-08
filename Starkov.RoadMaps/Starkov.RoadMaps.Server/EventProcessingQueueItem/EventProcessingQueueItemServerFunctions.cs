@@ -75,6 +75,17 @@ namespace Starkov.RoadMaps.Server
       foreach (var i in items)
         EventProcessingQueueItems.Delete(i);
     }
-
+    
+    /// <summary>
+    /// Проверить есть ли элемент очереди, содержащий id мероприятия
+    /// </summary>
+    /// <param name="id">Id мероприятия</param>
+    /// <returns>True - если такой элемент очереди есть, иначе - false</returns>
+    [Public]
+    public static bool HasQueueItemByEventId(long id)
+    {
+      return EventProcessingQueueItems.GetAll().Any(a => a.EventId == id);
+    }
+    
   }
 }

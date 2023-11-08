@@ -7,4 +7,5 @@ using Starkov.RoadMaps.EventProcessingQueueItem;
 
 namespace Starkov.RoadMaps.Client
 {
+
 }

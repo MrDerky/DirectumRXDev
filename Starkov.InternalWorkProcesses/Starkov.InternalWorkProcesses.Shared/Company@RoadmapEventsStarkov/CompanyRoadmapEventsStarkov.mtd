@@ -87,6 +87,9 @@
       "Code": "Status",
       "EntityGuid": "8e474db3-c1d5-4623-b887-f6ff19472395",
       "FlatListInStandaloneLookup": true,
+      "HandledEvents": [
+        "LookupServer"
+      ],
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "e9ce0220-bde2-4bbe-8d8c-d7b346b35f2e"

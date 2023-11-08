@@ -30,10 +30,16 @@
           "Name": "ControlGroup",
           "ColumnDefinitions": [
             {
-              "Percentage": 75.69
+              "Percentage": 26.92
             },
             {
-              "Percentage": 24.31
+              "Percentage": 17.01
+            },
+            {
+              "Percentage": 27.36
+            },
+            {
+              "Percentage": 28.71
             }
           ]
         },
@@ -62,12 +68,39 @@
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "f520a7c2-6cc6-4de1-8f62-63cfacb12f9f",
+          "Name": "DefaultStatus",
+          "ColumnNumber": 2,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+          "ParentGuid": "da2e77ed-a170-420f-a47c-ee54a41bce99",
+          "PropertyGuid": "ae26db65-ed43-43ac-bf05-8dc9e0637546",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "2638db5f-6ae6-4550-83b1-11dae49ba6d4",
+          "Name": "Status",
+          "ColumnNumber": 3,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+          "ParentGuid": "da2e77ed-a170-420f-a47c-ee54a41bce99",
+          "PropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
         }
       ]
     }
   ],
   "HandledEvents": [
-    "CreatedServer"
+    "CreatedServer",
+    "BeforeSaveServer"
   ],
   "IconResourcesKeys": [],
   "IntegrationServiceName": "RoadMapsEventStatus",
@@ -89,6 +122,8 @@
       "Code": "Name",
       "IsDisplayValue": true,
       "IsQuickSearchAllowed": true,
+      "IsRequired": true,
+      "IsUnique": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
       "PreviousPropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1"
     },
@@ -99,6 +134,23 @@
       "Code": "IsExecutable",
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
       "PreviousPropertyGuid": "56da5f26-0564-4d19-912b-26094611eabb"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "ae26db65-ed43-43ac-bf05-8dc9e0637546",
+      "Name": "IsDefault",
+      "Code": "IsDefault",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "375f62b9-613d-4cc6-8e62-65c01aaa0dbf"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetDefaultStatus",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::Starkov.RoadMaps.IEventStatus",
+      "ReturnTypeFullName": "Starkov.RoadMaps.IEventStatus, Sungero.Domain.Interfaces"
     }
   ],
   "PublicStructures": [],

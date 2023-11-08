@@ -7,6 +7,26 @@ using Starkov.InternalWorkProcesses.Company;
 
 namespace Starkov.InternalWorkProcesses.Client
 {
+  partial class CompanyAnyChildEntityCollectionActions
+  {
+    public override void DeleteChildEntity(Sungero.Domain.Client.ExecuteChildCollectionActionArgs e)
+    {
+      // Если по мероприятию ведутся работы, то запретить удалять
+      var entityId = _objs.FirstOrDefault().Id;
+      var rmEvent = InternalWorkProcesses.Companies.As(e.RootEntity).RoadmapEventsStarkov.FirstOrDefault(a => a.Id == entityId);
+      if (rmEvent != null && (rmEvent.CurrentTaskId.HasValue || RoadMaps.PublicFunctions.EventProcessingQueueItem.HasQueueItemByEventId(rmEvent.Id)))
+        Dialogs.ShowMessage("Нельзя удалять запись, так как она уже используется.", MessageType.Error);
+      else
+        base.DeleteChildEntity(e);
+    }
+
+    public override bool CanDeleteChildEntity(Sungero.Domain.Client.CanExecuteChildCollectionActionArgs e)
+    {
+      return base.CanDeleteChildEntity(e);
+    }
+
+  }
+
   partial class CompanyActions
   {
     public virtual void ImportRoadmapStarkov(Sungero.Domain.Client.ExecuteActionArgs e)

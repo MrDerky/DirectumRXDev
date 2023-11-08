@@ -275,6 +275,9 @@
       "Code": "NewEventStatus",
       "EntityGuid": "8e474db3-c1d5-4623-b887-f6ff19472395",
       "FlatListInStandaloneLookup": true,
+      "HandledEvents": [
+        "LookupServer"
+      ],
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "60d956d7-7e35-480e-b22c-ae4794589fb5"
     }

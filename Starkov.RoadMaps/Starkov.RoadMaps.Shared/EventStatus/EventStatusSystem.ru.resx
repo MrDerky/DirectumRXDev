@@ -73,4 +73,7 @@
   <data name="Property_IsExecutable" xml:space="preserve">
     <value>Создавать задачи по мероприятиям</value>
   </data>
+  <data name="Property_IsDefault" xml:space="preserve">
+    <value>Статус по умолчанию</value>
+  </data>
 </root>
