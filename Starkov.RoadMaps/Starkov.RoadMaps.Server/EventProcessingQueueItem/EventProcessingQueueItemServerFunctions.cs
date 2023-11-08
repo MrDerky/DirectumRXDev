@@ -10,8 +10,12 @@ namespace Starkov.RoadMaps.Server
   partial class EventProcessingQueueItemFunctions
   {
     
-    //TODO добавить summary
-    [Public]
+    /// <summary>
+    /// Создать элемент очереди по мероприятию
+    /// </summary>
+    /// <param name="rmEvent">Мероприятие</param>
+    /// <param name="taskId">Id задачи по мероприятию</param>
+    /// <param name="eventStatusId">Id статуса мероприятия</param>
     public static void CreateQueueItemByEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, long? taskId, long? eventStatusId)
     {
       var item = EventProcessingQueueItems.Create();
@@ -27,8 +31,12 @@ namespace Starkov.RoadMaps.Server
       item.Save();
     }
     
-    //TODO добавить summary
-    [Public]
+    
+    /// <summary>
+    /// Получить элемент очереди по задаче
+    /// </summary>
+    /// <param name="id">Id задачи</param>
+    /// <returns>Элемент очереди</returns>
     public static IEventProcessingQueueItem GetStartedQueueItemByTaskId(long id)
     {
       return EventProcessingQueueItems.GetAll()
@@ -36,7 +44,11 @@ namespace Starkov.RoadMaps.Server
         .FirstOrDefault(a => a.TaskId == id);
     }
     
-    //TODO добавить summary
+    
+    /// <summary>
+    /// Получить последние элементы очереди по мероприятиям
+    /// </summary>
+    /// <returns>Коллекция элементов очереди</returns>
     public static System.Collections.Generic.IEnumerable<RoadMaps.IEventProcessingQueueItem> GetLastQueueItemsByEvent()
     {
       var itemGrups = EventProcessingQueueItems.GetAll().GroupBy(a => a.EventId);
@@ -51,7 +63,11 @@ namespace Starkov.RoadMaps.Server
       return items;
     }
     
-    //TODO добавить summary
+    
+    /// <summary>
+    /// Удалить элементы очереди по id мероприятия
+    /// </summary>
+    /// <param name="id">Id мероприятия</param>
     public static void RemoveQueueItemsByEventId(long id)
     {
       var items = EventProcessingQueueItems.GetAll().Where(a => a.EventId == id);

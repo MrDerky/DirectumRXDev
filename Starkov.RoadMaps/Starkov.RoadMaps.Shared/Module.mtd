@@ -109,7 +109,7 @@
       "ReturnTypeFullName": "System.Nullable"
     },
     {
-      "Name": "GetEventByTask",
+      "Name": "GetStartedEventByTask",
       "Parameters": [
         {
           "Name": "task",
@@ -119,28 +119,6 @@
       ],
       "ReturnType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
       "ReturnTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
-    },
-    {
-      "Name": "GetRmEventByCompanyIdAndId",
-      "Parameters": [
-        {
-          "Name": "companyId",
-          "ParameterType": "global::System.Int64",
-          "ParameterTypeFullName": "System.Int64"
-        },
-        {
-          "Name": "eventId",
-          "ParameterType": "global::System.Int64",
-          "ParameterTypeFullName": "System.Int64"
-        }
-      ],
-      "ReturnType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
-      "ReturnTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
-    },
-    {
-      "Name": "GetRunTodayRmEvents",
-      "ReturnType": "global::System.Linq.IQueryable<global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov>",
-      "ReturnTypeFullName": "System.Linq.IQueryable"
     },
     {
       "Name": "HandleCompletedRoadMapEvent",

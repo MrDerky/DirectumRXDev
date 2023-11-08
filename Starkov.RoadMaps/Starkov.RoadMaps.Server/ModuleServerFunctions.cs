@@ -13,39 +13,42 @@ namespace Starkov.RoadMaps.Server
     /// Получить коллекцию мероприятий дорожной карты
     /// </summary>
     /// <returns>Коллекция мероприятий</returns>
-    [Public]
     public IQueryable<InternalWorkProcesses.ICompanyRoadmapEventsStarkov> GetRunTodayRmEvents()
     {
       var today = Calendar.Today.Date;
-      var query = InternalWorkProcesses.Companies.GetAll()
+      return InternalWorkProcesses.Companies.GetAll()
         .Where(d => d.RoadmapEventsStarkov.Any(e => e.Status.IsExecutable.GetValueOrDefault()))
         .SelectMany(a => a.RoadmapEventsStarkov
                     .Where(b => b.Status.IsExecutable.GetValueOrDefault())
                     .Where(e => !e.CurrentTaskId.HasValue)
                     .Where(c => c.RunDate <=  today))
         .Cast<InternalWorkProcesses.ICompanyRoadmapEventsStarkov>();
-      
-      return query;
     }
     
-    //TODO добавить summary
-    [Public]
+    
+    /// <summary>
+    /// Получить мероприятие по id компании и id мероприятия
+    /// </summary>
+    /// <param name="companyId">Id компании</param>
+    /// <param name="eventId">Id мероприятия</param>
+    /// <returns>Мероприятие</returns>
     public InternalWorkProcesses.ICompanyRoadmapEventsStarkov GetRmEventByCompanyIdAndId(long companyId, long eventId)
     {
-      
-      
       return InternalWorkProcesses.Companies
         .GetAll(a => a.Id == companyId)
         .FirstOrDefault()?
         .RoadmapEventsStarkov
-        .FirstOrDefault(b => b.Id == eventId);
-      
+        .FirstOrDefault(b => b.Id == eventId); 
     }
     
     
-    //TODO добавить summary
+    /// <summary>
+    /// Получить мероприятие в работе по задаче на исполнение поручения
+    /// </summary>
+    /// <param name="task">Задача</param>
+    /// <returns>Мероприятия</returns>
     [Public]
-    public InternalWorkProcesses.ICompanyRoadmapEventsStarkov GetEventByTask(InternalWorkProcesses.IActionItemExecutionTask task)
+    public InternalWorkProcesses.ICompanyRoadmapEventsStarkov GetStartedEventByTask(InternalWorkProcesses.IActionItemExecutionTask task)
     {
       var rmEvent = InternalWorkProcesses.Companies.GetAll()
         .FirstOrDefault(a => a.Id == task.CompanyGroup.Companies.FirstOrDefault().Id)
@@ -55,12 +58,16 @@ namespace Starkov.RoadMaps.Server
       if (rmEvent != null)
         return rmEvent;
       
-      var queueItem = RoadMaps.PublicFunctions.EventProcessingQueueItem.GetStartedQueueItemByTaskId(task.Id);
+      var queueItem = Functions.EventProcessingQueueItem.GetStartedQueueItemByTaskId(task.Id);
       return GetRmEventByCompanyIdAndId(queueItem.CompanyId.GetValueOrDefault(), queueItem.EventId.GetValueOrDefault());
     }
     
     
-    // TODO добавить summary
+    /// <summary>
+    /// Обработать завершенное мероприятие
+    /// </summary>
+    /// <param name="rmEvent">Мероприятие</param>
+    /// <param name="status">Новый статус мероприятия</param>
     [Public]
     public void HandleCompletedRoadMapEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent, IEventStatus status)
     {

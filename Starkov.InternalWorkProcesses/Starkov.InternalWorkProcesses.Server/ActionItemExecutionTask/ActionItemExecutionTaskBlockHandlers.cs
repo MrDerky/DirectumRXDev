@@ -17,9 +17,8 @@ namespace Starkov.InternalWorkProcesses.Server.ActionItemExecutionTaskBlocks
       if (!_obj.IsRoadmapTaskStarkov.GetValueOrDefault())
         return;
       
-      // Установить статус, указанный исполнителем мероприятию, по которому запущена задача
       var rmEvent = _obj.CompanyGroup.Companies.FirstOrDefault().RoadmapEventsStarkov.FirstOrDefault(a => a.CurrentTaskId == _obj.Id)
-        ?? RoadMaps.PublicFunctions.Module.GetEventByTask(_obj);
+        ?? RoadMaps.PublicFunctions.Module.GetStartedEventByTask(_obj);
       
       RoadMaps.PublicFunctions.Module.HandleCompletedRoadMapEvent(rmEvent, _block.NewEventStatusStarkov);
     }

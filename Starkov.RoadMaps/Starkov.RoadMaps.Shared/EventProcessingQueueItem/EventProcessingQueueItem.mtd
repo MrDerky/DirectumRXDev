@@ -209,42 +209,6 @@
       "PreviousPropertyGuid": "53722a8b-599b-4eaf-a44f-0e1c61c8518b"
     }
   ],
-  "PublicFunctions": [
-    {
-      "Name": "CreateQueueItemByEvent",
-      "Parameters": [
-        {
-          "Name": "rmEvent",
-          "ParameterType": "global::Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov",
-          "ParameterTypeFullName": "Starkov.InternalWorkProcesses.ICompanyRoadmapEventsStarkov, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "taskId",
-          "ParameterType": "global::System.Nullable<global::System.Int64>",
-          "ParameterTypeFullName": "System.Nullable"
-        },
-        {
-          "Name": "eventStatusId",
-          "ParameterType": "global::System.Nullable<global::System.Int64>",
-          "ParameterTypeFullName": "System.Nullable"
-        }
-      ],
-      "ReturnType": "void",
-      "ReturnTypeFullName": "System.Void"
-    },
-    {
-      "Name": "GetStartedQueueItemByTaskId",
-      "Parameters": [
-        {
-          "Name": "id",
-          "ParameterType": "global::System.Int64",
-          "ParameterTypeFullName": "System.Int64"
-        }
-      ],
-      "ReturnType": "global::Starkov.RoadMaps.IEventProcessingQueueItem",
-      "ReturnTypeFullName": "Starkov.RoadMaps.IEventProcessingQueueItem, Sungero.Domain.Interfaces"
-    }
-  ],
   "PublicStructures": [],
   "ResourcesKeys": [],
   "RibbonCardMetadata": {

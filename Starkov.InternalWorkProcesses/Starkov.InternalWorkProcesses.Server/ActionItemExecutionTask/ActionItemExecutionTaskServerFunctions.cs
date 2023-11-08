@@ -9,6 +9,12 @@ namespace Starkov.InternalWorkProcesses.Server
 {
   partial class ActionItemExecutionTaskFunctions
   {
+    
+    /// <summary>
+    /// Создать задачу по мероприятию
+    /// </summary>
+    /// <param name="rmEvent">Мероприятие</param>
+    /// <returns>Задача</returns>
     [Public]
     public static InternalWorkProcesses.IActionItemExecutionTask CreateTaskByRmEvent(InternalWorkProcesses.ICompanyRoadmapEventsStarkov rmEvent)
     {
@@ -31,6 +37,12 @@ namespace Starkov.InternalWorkProcesses.Server
       
     }
     
+    
+    /// <summary>
+    /// Получить задачу по od
+    /// </summary>
+    /// <param name="id">Id задачи</param>
+    /// <returns>Задача</returns>
     [Remote(IsPure = true), Public]
     public static InternalWorkProcesses.IActionItemExecutionTask GetTaskById(long id)
     {

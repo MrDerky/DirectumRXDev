@@ -20,7 +20,7 @@ namespace Starkov.RoadMaps.Server
         HandleQueueItem(i);
       
       // Обработка мероприятий 
-      var rmEvents = PublicFunctions.Module.GetRunTodayRmEvents();
+      var rmEvents = Functions.Module.GetRunTodayRmEvents();
       foreach(var e in rmEvents)
       {
         if (queue.Any(a => a.EventId == e.Id))
@@ -40,7 +40,7 @@ namespace Starkov.RoadMaps.Server
     /// <param name="item">Элемент очереди</param>
     private void HandleQueueItem(IEventProcessingQueueItem item)
     {
-      var rmEvent = RoadMaps.PublicFunctions.Module.GetRmEventByCompanyIdAndId(item.CompanyId.GetValueOrDefault(), item.EventId.GetValueOrDefault());
+      var rmEvent = RoadMaps.Functions.Module.GetRmEventByCompanyIdAndId(item.CompanyId.GetValueOrDefault(), item.EventId.GetValueOrDefault());
       
       if (item.Type == RoadMaps.EventProcessingQueueItem.Type.TaskStarted)
         HandleRunningEvent(rmEvent, item, null);
@@ -60,7 +60,7 @@ namespace Starkov.RoadMaps.Server
       if (item == null)
       {
         if (IsLocked(rmEvent, RoadMaps.Resources.LockWarningTaskStarted))
-          RoadMaps.PublicFunctions.EventProcessingQueueItem.CreateQueueItemByEvent(rmEvent, inputTaskId, null);
+          Functions.EventProcessingQueueItem.CreateQueueItemByEvent(rmEvent, inputTaskId, null);
         else
           rmEvent.CurrentTaskId = inputTaskId;
       }
