@@ -1,0 +1,111 @@
+{
+  "$type": "Sungero.Metadata.TaskMetadata, Sungero.Workflow.Shared",
+  "NameGuid": "226f3f61-7a25-42e2-b75c-8110ca76f97e",
+  "Name": "Task",
+  "AccessRightsMode": "Both",
+  "BaseGuid": "d795d1f6-45c1-4e5e-9677-b53fb7280c7e",
+  "BlockIds": [],
+  "Blocks": [
+    {
+      "$type": "Sungero.Metadata.ScriptBlockMetadata, Sungero.Workflow.Shared",
+      "NameGuid": "a0d0a261-9f35-4814-8f41-5612dfa94980",
+      "Name": "ScriptBlock",
+      "BaseGuid": "1f76cc5d-f096-4062-b34a-51b3c02269f2",
+      "Properties": []
+    },
+    {
+      "$type": "Sungero.Metadata.AssignmentBlockMetadata, Sungero.Workflow.Shared",
+      "NameGuid": "b73cf3ba-086e-4f30-9081-4bb2e95b90b5",
+      "Name": "AssignmentBlock",
+      "BaseGuid": "9cc122a7-f93b-4053-9219-cd2f22af0365",
+      "EntityType": "90daecb7-5d5d-465e-95a4-3235b8c01d5b",
+      "Properties": []
+    },
+    {
+      "$type": "Sungero.Metadata.TaskBlockMetadata, Sungero.Workflow.Shared",
+      "NameGuid": "7a0a0e6c-0183-4a2f-b1c6-a583fc842c5c",
+      "Name": "TaskBlock",
+      "BaseGuid": "af11beb2-61e1-453f-9c69-93b9f06355ec",
+      "EntityType": "226f3f61-7a25-42e2-b75c-8110ca76f97e",
+      "Properties": []
+    }
+  ],
+  "CanBeNavigationPropertyType": true,
+  "CanBeSearch": false,
+  "CreationAreaMetadata": {
+    "NameGuid": "8d829390-c6cf-4b00-b846-412f2d086650",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "bd0a4ce3-3467-48ad-b905-3820bf6b9da6",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "RoadMapsTask",
+  "IsVisibleThreadText": true,
+  "NeverLinkToParentWhenCreated": true,
+  "OperationsClass": "",
+  "Overridden": [
+    "CanBeSearch",
+    "UseSchemeFromSettings"
+  ],
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "3364c324-c4c4-4ccb-a81c-53653255a022",
+      "Name": "Observers",
+      "EntityGuid": "c4a6c7a9-1eda-430b-a71e-9fb2bc436a53",
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "EntityGuid"
+      ]
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "aef5fffd-6a02-486e-8fe9-02f0d85b42f4",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "df9f65c8-179a-4c7a-8b68-0d7c9ed2ef72",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Scheme": {
+    "NameGuid": "c7ae4ee8-f2a6-4784-8e61-7f7f642dbcd1",
+    "Name": "RouteScheme",
+    "IsAncestorMetadata": true,
+    "VersionsCounter": 1
+  },
+  "UseSchemeFromSettings": true,
+  "Versions": [
+    {
+      "Type": "TaskMetadata",
+      "Number": 2
+    },
+    {
+      "Type": "WorkflowEntityMetadata",
+      "Number": 2
+    },
+    {
+      "Type": "EntityMetadata",
+      "Number": 12
+    }
+  ]
+}
